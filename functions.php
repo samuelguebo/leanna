@@ -144,26 +144,26 @@ function leanna_scripts() {
 
 
     // CSS
-	wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css' );
-	wp_enqueue_style( 'foundation-css', get_template_directory_uri().'/css/foundation.css' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css' );
+	wp_enqueue_style( 'normalize', get_template_directory_uri().'/assets/css/normalize.min.css' );
+	wp_enqueue_style( 'foundation-css', get_template_directory_uri().'/assets/css/foundation.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'motion-ui', 'https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.css' );
-	wp_enqueue_style( 'slick-slider', get_template_directory_uri().'/css/slick.css');
+	wp_enqueue_style( 'slick-slider', get_template_directory_uri().'/assets/css/slick.css');
     
     $style = "style-blue";
     if(""!=get_theme_mod('leanna_theme_color')){
         $color = esc_attr(get_theme_mod('leanna_theme_color'));
         $style = 'style-'.$color;
     } 
-	wp_enqueue_style( 'iam-style', get_template_directory_uri().'/css/'.$style.'.css' );
+	wp_enqueue_style( 'iam-style', get_template_directory_uri().'/assets/css/'.$style.'.css' );
     
     // JS
     wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'modernizer', get_template_directory_uri().'/js/modernizr.min.js', true);
-	wp_enqueue_script( 'foundation-js', get_template_directory_uri().'/js/foundation.min.js', true);
+	wp_enqueue_script( 'modernizer', get_template_directory_uri().'/assets/js/modernizr.min.js', true);
+	wp_enqueue_script( 'foundation-js', get_template_directory_uri().'/assets/js/foundation.min.js', true);
 //	wp_enqueue_script( 'scroll-reveal', get_template_directory_uri().'/js/scrollreveal.min.js', true);
-	wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/js/slick.min.js','1.6.0', true);
-	wp_enqueue_script( 'main-scripts', get_template_directory_uri().'/js/scripts.js');
+	wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/assets/js/slick.min.js','1.6.0', true);
+	wp_enqueue_script( 'main-scripts', get_template_directory_uri().'/assets/js/scripts.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -175,7 +175,7 @@ function leanna_admin_js($hook) {
         return;
     }
     */
-    wp_enqueue_script( 'leanna_admin_js', get_template_directory_uri() . '/js/admin.js' );
+    wp_enqueue_script( 'leanna_admin_js', get_template_directory_uri() . '/assets/js/admin.js' );
 
 }
 add_action( 'wp_enqueue_scripts', 'leanna_scripts' );
