@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'leanna_widgets_init' );
 function leanna_scripts() {
     
     // Google fonts
-	wp_enqueue_style( 'iam-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:wght@300;700|Merriweather', false );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Belleza&display=swap', false, null );
 
     // CSS
 	wp_enqueue_style( 'foundation-css', get_template_directory_uri().'/assets/css/foundation.css' );
@@ -158,6 +158,7 @@ function leanna_scripts() {
     // JS
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'modernizer', get_template_directory_uri().'/assets/js/modernizr.min.js', true);
+	wp_enqueue_script( 'typed', get_template_directory_uri().'/assets/js/typed.js', true);
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri().'/assets/js/foundation.min.js', true);
 //	wp_enqueue_script( 'scroll-reveal', get_template_directory_uri().'/js/scrollreveal.min.js', true);
 	wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/assets/js/slick.min.js','1.6.0', true);

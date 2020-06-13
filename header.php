@@ -30,30 +30,16 @@ and everything up until <div id="content">
 </head>
 
 <body <?php body_class(); ?>>
-    <section id ="boxed-wrapper">
-        <section class= "fixed-header">
-            <header class="background-white main-row">
-                <div class="row clearfix">
-                    <?php if(has_custom_logo()):?>
-                    <div class="large-2 medium-2 small-6 columns logo">
-                        <a href="<?php echo site_url(); ?>">  
-                            <?php the_custom_logo();?>
-                        </a>
-                    </div>
-                    <?php else:?>
-                    <div class="large-2 medium-10 small-6 columns columns">
-                        <h2 class="site-title">
-                            <a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
-                        </h2>
-                    </div>
-                    <?php endif;?>
-
-                    <div class="nav-wrapper large-8 medium-10 small-4 columns">
-                        <?php get_template_part('menu'); ?>
-                    </div><!--/nav-wrapper-->   
-                    <div class="large-2 columns socials">
-                        <?php get_template_part('menu-social'); ?>
-                    </div><!--/social icons-->   
-                </div>
-            </header>
-        </section>
+    <header>
+        <div class="nav-wrapper large-8 medium-10 small-4 columns">
+            <?php get_template_part('menu'); ?>
+        </div><!--/nav-wrapper-->     
+        <?php if(is_front_page()){
+            // require slider
+            get_template_part ('template-parts/slider'); 
+        }
+        ?>   
+        <div class="socials">
+            <?php get_template_part('menu-social');?>
+        </div>
+    </header>

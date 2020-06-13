@@ -33,6 +33,5 @@ after and containing the bottom widget area
 				</div>
 			</footer>
 			<?php wp_footer(); ?>
-		</section><!-- .boxed-wrapper-->
 	</body>
 </html>

@@ -14,17 +14,12 @@ Template part for displaying a slide item in the Slider loop
 
 ?>
 <section class="post-item">
-        <img src="<?php echo leanna_get_thumb_by_id($post['slide_image'],'slider-cover');?>" alt="<?php echo $post['slide_title'];?>" class="responsive delay"/>
-        <div class="slider-caption post-item-caption">
-            <div class="panel">
-                <h4 class="post-item-description"><?php echo $post['slide_title'];?></h4>
-                <h2 class="post-item-title"><?php echo $post['slide_description'];?></h2>
-                    
-        <div class="buttons">
-            <a href="<?php echo get_permalink( $post['slide_page_1'] );?>" class="small button round navy one"><?php echo esc_attr($post['slide_button_text_1']);?></a>
-            <a href="<?php echo get_permalink( $post['slide_page_2'] );?>" class="small button round navy two"><?php echo esc_attr($post['slide_button_text_2']);?></a>
-
+        <div class="img-wrapper">
+            <img src="<?php echo leanna_get_thumb_by_id($post['slide_image'],'full');?>" alt="<?php echo $post['slide_title'];?>" class="responsive delay"/>
         </div>
+        <div class="slider-caption post-item-caption">
+            <div class="panel large-8 columns large-centered">
+                <h1 class="post-item-title"><?php echo $post['slide_description'];?> <span class="type-machine"><?php echo $post['slide_title'];?></span></h1>
             </div>
         </div>
     <div class="clearfix"></div>

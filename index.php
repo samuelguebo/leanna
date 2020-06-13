@@ -19,10 +19,6 @@ get_header();
       
 // Make sure Kirki is activated
 if ( class_exists( 'Kirki' ) ):
-
-    // require slider
-    get_template_part ('slider');
-	
 	// services section
 	get_template_part('template-parts/section-services');
 

@@ -1,6 +1,6 @@
 $author-image-radius : 60px;
 $icon-font: 'FontAwesome';
-$primary-font: 'Merriweather', 'serif';
+$primary-font: 'Belleza', 'sans-serif';
 $secondary-font: 'Poppins','Georgia', sans-serif;
 $shadow-color: #c9c9c9;
 $border-color: #ededed;
@@ -20,7 +20,7 @@ Table of Content
  6.0 - Navigation (WordPress Highlight)
  7.0 - Navigation (Toggle), breakpoint for responsive menu
  8.0 - Slider
- 9.0 - Content Hompepage
+ 9.0 - Content (Single Post)
  9.1 - Content (Grey section)
  9.2 - Content (White section)
 10.0 - Content (Posts and Custom post types)
@@ -86,6 +86,7 @@ body {
 	background-attachment: scroll;
 	font-family: $primary-font;
 }
+/*
 #boxed-wrapper {
 	background: #fff;
 	display: block;
@@ -95,6 +96,7 @@ body {
 	max-width: 1100px;
 	width: 100%;
 }
+*/
 
 
 
@@ -103,6 +105,24 @@ body {
 3.0 - Header
 ================================================================================================
 */
+body.home header {
+	position:relative;
+
+	.nav-wrapper, .socials {
+		position: absolute;
+	}
+
+	.socials {
+		bottom: 15%;
+		left: 45%;
+	}
+	.nav-wrapper{
+		right: 10%;
+		top: 20px;
+	}
+
+}
+
 header {
 	display: block;
 	position: relative;
@@ -111,22 +131,6 @@ header {
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-size: cover;
-}
-section.fixed-header {
-	/* position:fixed;*/
-	z-index: 100;
-	width: 100%;
-	padding:5px 20px 0px 20px;    
-}
-header div.logo {
-	padding: 0px;
-	z-index: 100;
-	
-}
-header div.logo img{
-	max-height: 90px;
-	width: auto;
-	
 }
 
 header div.slogan a {
@@ -173,32 +177,6 @@ header .banner-top .widget-title{
 	display:none;
 }
 
-header .search-form input{   
-border: none;
-border-bottom: solid 1px $primary-color;
-box-shadow: none;
-margin: 0;
-
-}
-header .search-form .button, header .search-form button {
-	background-color: transparent;
-	color:$primary-color;
-	padding:5px;
-	font-size: 1.15rem;
-	margin:0;
-}
-
-header .search-form button:hover, header .search-form button:focus, header .search-form .button:hover, header .search-form .button:focus {
-	color: $secondary-color;
-	background-color: transparent;
-}
-
-header .search-form .small-2{
-	width: 10%;
-}
-header .search-form .small-10{
-	width: 90%;
-}  
 
 /*
 ================================================================================================
@@ -271,16 +249,17 @@ header .search-form .small-10{
 .nav-wrapper nav {
 	/*! overflow: hidden; */
 }
-
+/* override */
+.top-bar.expanded .title-area {
+	background: transparent;
+}
 .top-bar .toggle-topbar.menu-icon {
 	top: 0%;
 }
 .main-nav li:first-child {
 	border-left: none;
 }
-.top-bar ul li {
-background: #FFF;
-}
+
 .top-bar .toggle-topbar.menu-icon {
 	border-bottom: none;
 }
@@ -289,7 +268,7 @@ background: #FFF;
 }
 
 .top-bar .toggle-topbar.menu-icon a {
-	color: $link-color;
+	color: $secondary-color;
 	padding: 0;
 	position: relative;
 	font-family: $primary-font;
@@ -299,7 +278,7 @@ background: #FFF;
 	box-shadow: none;
 	font-family: 'FontAwesome';
 	content: '\f0c9';
-	color:$primary-color;
+	color: $secondary-color;
 	font-size: 1.8em;
 	
 }
@@ -370,33 +349,19 @@ footer .socials ul li a:hover {
 }
 
 header .socials ul li a {
-	color: $link-color;
-	font-size: 15px;
-	width: 36px;
-	height: 36px;
+	color: $light-color;
+	font-size: 25px;
 	
-	-moz-border-radius: 18px;
-	-webkit-border-radius: 18px;
-	border-radius: 18px;
-	border: solid 1px $link-color;
+	border: none;
 	display: block;
 }
 
 header .socials ul li a:hover {
-	color: $dark-color;
+	color: $secondary-color;
 	text-align: center;
-	border: solid 1px $dark-color;
+	border: none;
 }
 
-header .nav-wrapper, header .socials {
-		/*margin-top:15px;*/
-}
-
-@media only screen and (max-width: 64em) { 
-	header .socials {
-		display: none;
-	}
-}
 .socials ul li {
 	text-align: center;
 	float: left;
@@ -549,39 +514,58 @@ meta.foundation-mq-topbar {
 @for $i from 1 through 6 {
 	.slider-wrapper .panel h#{$i} {
 		color: #FFF;
+		font-family: $secondary-font;
+		font-weight: 700;
+		text-transform: none;
 	}
 }
 
-.slider-wrapper .panel .post-item-description {
-	font-weight: 200;
-}
-
-.slider-wrapper a.button{
-		background:#FFF;
-		color:$secondary-color;
-		margin-top: 20px;
-		border-radius:5px;
-		/* font-size:0.95em; */
-		padding: 13px 40px;
-}
-
-@media only screen and (max-width: 37.50em) {
-	.slider-wrapper a.button{
-		margin-top: 5px;
-		border-radius:5px;
-		font-size:0.5em;
-		padding: 10px 30px;
+.slider-wrapper {
+	/* animation, rotating circle */
+	.post-item .img-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.post-item .img-wrapper > img{
+		animation: rotateCircle 30s linear infinite;
+		margin: 0;
+		padding: 0;
+		display: block;
+		max-width: 70%;
+		border: 0;
+		overflow: hidden;    
+		opacity: .7;
+		margin-top: -15%;
+		filter: brightness(30);
 	}
 
-	.slider-wrapper .post-item img{ 
-		min-height: 230px;
-		height: 100%;
+	/* Lines */
+@keyframes rotateCircle {
+	0% {
+		transform: rotate(0deg);
 	}
-	.slider-wrapper{
-		max-height: 230px !important;
-		overflow: hidden;
+	100% {
+		transform: rotate(180deg);
+	}
+  }
+	.post-item-title {
+		font-size: 4em;
+		span {
+			color: $secondary-color;
+		}
+	}
+	
+	a.button{
+			background:#FFF;
+			color:$secondary-color;
+			margin-top: 20px;
+			border-radius:5px;
+			/* font-size:0.95em; */
+			padding: 13px 40px;
 	}
 }
+
 .slider-wrapper a.button:hover{
 	background:#FFF;
 	color:$dark-color;
@@ -606,31 +590,18 @@ meta.foundation-mq-topbar {
 }
 .slider-wrapper .post-item {
 	background: $primary-color;/* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(-90deg, $secondary-color, $primary-color); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(-90deg, $secondary-color, $primary-color); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(-90deg, $secondary-color, $primary-color); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(-90deg, $secondary-color, $primary-color); /* Standard syntax */
 	position:relative;
-}
-.slider-wrapper .post-item > img{ 
-	margin: 0;
-	padding: 0;
-	display: block;
-	width: 100%;
-	border: 0;
-	max-height: 400px;
-	overflow: hidden;    
-	opacity: .15;
 }
 
 .slider-wrapper .slider-caption {
 	position: absolute;
 	padding: 20px;
-	top:20%;
+	top:10%;
 	text-align: center;
 	text-transform: uppercase;
 	width:100%;
 }
+
 .slider-wrapper .panel {
 	border: none;
 	background: none;
@@ -682,6 +653,12 @@ button.slick-prev.slick-arrow {
 .slider-wrapper{
 	max-height: 400px;
 	overflow: hidden;
+}
+
+/* Cursor */
+.typed-cursor {
+	font-weight: 100;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
@@ -1840,7 +1817,7 @@ footer .breadcrumbs > *::before {
 	}
 
 	.slider-caption .post-item-title {
-		font-size: 2em;
+		/*font-size: 2em;*/
 	}
 	.nav-wrapper.left {
 		
@@ -1882,6 +1859,21 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 37.50em) {
+	.slider-wrapper a.button{
+		margin-top: 5px;
+		border-radius:5px;
+		font-size:0.5em;
+		padding: 10px 30px;
+	}
+
+	.slider-wrapper .post-item img{ 
+		min-height: 230px;
+		height: 100%;
+	}
+	.slider-wrapper{
+		max-height: 230px !important;
+		overflow: hidden;
+	}
 	
 	.slider-caption .post-item-title {
 		font-size: 1.4em;
