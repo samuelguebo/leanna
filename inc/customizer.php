@@ -309,7 +309,7 @@ function leanna_customize_register( $wp_customize ) {
 	$wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
 	$wp_customize->add_setting(
 		'leanna_theme_color', array(
-			'default' => 'blue',
+			'default' => 'lavender',
 			'sanitize_callback'	=> 'leanna_sanitize_colors'
 
 		)

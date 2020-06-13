@@ -45,7 +45,11 @@ class Palette_Custom_Control extends WP_Customize_Control
 					}
 				
 					#palette #navy {
-						background: #2b5f9a;
+						background: ;
+					}
+					
+					#palette #lavender {
+						background: #c39bb9;
 					}
 					#palette #blue {
 						background: #0e94c9;
@@ -74,21 +78,32 @@ class Palette_Custom_Control extends WP_Customize_Control
 					  <?php echo esc_html( $this->label ); ?>
 					</h1>
 				  <div id="palette">
+					<!-- lavender -->
+					<a id="lavender" href="#" <?php if($current_color == 'lavender') echo $selected_css;?>>
+					<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="lavender" />
+					</a>
+					
+					<!-- blue -->
 					<a id="blue" href="#" <?php if($current_color == 'blue') echo $selected_css;?>>
 						<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="blue" />
 					</a>
-					<a id="navy" href="#" <?php if($current_color == 'navy') echo $selected_css;?>>
-					<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="navy" />
-					</a>
+					
+					<!-- green -->
 					<a id="green" href="#" <?php if($current_color == 'green') echo $selected_css;?>>
 						<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="green"/>
 					</a>
+					
+					<!-- yellow -->
 					<a id="yellow" href="#" <?php if($current_color == 'yellow') echo $selected_css;?>>
 						<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> value="yellow"/>
 						</a>
+					
+					<!-- orange -->
 					<a id="orange" href="#" <?php if($current_color == 'orange') echo $selected_css;?>>
 						<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="orange" />
 					</a>
+					
+					<!-- red -->
 					<a id="red" href="#" <?php if($current_color == 'red') echo $selected_css;?> <?php if($current_color == 'red') echo $selected_css;?>>
 						<input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="red"/>
 					</a>

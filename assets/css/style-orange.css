@@ -50,41 +50,82 @@ a:hover, a:focus {
   color: #020d16;
 }
 
-.panel h1,
-.panel h2,
-.panel h3,
-.panel h4,
-.panel h5,
+h1 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+h2 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+h3 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+h4 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+h5 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+h6 {
+  font-family: "Poppins", "Georgia", sans-serif;
+}
+
+.panel h1 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+  font-family: "Merriweather", "serif";
+  color: #FF8000;
+}
+
+.panel h2 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+  font-family: "Merriweather", "serif";
+  color: #FF8000;
+}
+
+.panel h3 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+  font-family: "Merriweather", "serif";
+  color: #FF8000;
+}
+
+.panel h4 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+  font-family: "Merriweather", "serif";
+  color: #FF8000;
+}
+
+.panel h5 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+  font-family: "Merriweather", "serif";
+  color: #FF8000;
+}
+
 .panel h6 {
   line-height: 1;
   margin-bottom: 0.625rem;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   color: #FF8000;
-  text-transform: uppercase;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: bold;
-}
 /*
 ================================================================================================
 2.0 - Background
 ================================================================================================
 */
 body {
-  background-image: url("../img/gray-pattern.jpg");
   background-position: left top;
   background-repeat: repeat;
   background-attachment: scroll;
+  font-family: "Merriweather", "serif";
 }
 
 #boxed-wrapper {
@@ -148,7 +189,7 @@ header div.slogan a:hover {
 .single-cover .title.center {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   padding: 1.6em 0px;
   display: block;
   font-weight: 300;
@@ -157,7 +198,7 @@ header div.slogan a:hover {
 }
 
 header .site-title {
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   font-size: 4.5em;
   padding: 0;
   margin: 0;
@@ -301,7 +342,7 @@ header .search-form .small-10 {
   color: #FF8000;
   padding: 0;
   position: relative;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 .top-bar .toggle-topbar.menu-icon a span::after {
@@ -318,7 +359,7 @@ header .search-form .small-10 {
 }
 
 .nav-wrapper nav ul li a {
-  font-family: "Roboto";
+  font-family: "Poppins", "Georgia", sans-serif;
   text-transform: uppercase;
 }
 
@@ -896,7 +937,7 @@ meta.foundation-mq-topbar {
 
 .slider-wrapper a.button {
   border-radius: 30px;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 .slider-wrapper a.two.button {
@@ -1194,7 +1235,7 @@ article .post-item-date {
 }
 
 .single-row article.post-item .post-item-title {
-  font-family: "Montserrat", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Merriweather", "serif", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 2.5rem;
   padding-bottom: 5px;
@@ -1280,7 +1321,7 @@ section.main-row.white-section .white-section-intro {
 }
 
 section.white-section .section-title, section.white-section .item-title {
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 section.white-section .bottom-line {
@@ -1474,7 +1515,7 @@ article .panel .button:focus,
 }
 
 article.post-item .post-item-title {
-  font-family: "Montserrat", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Merriweather", "serif", Helvetica, Roboto, Arial, sans-serif;
   text-transform: capitalize;
   font-weight: 300;
 }
@@ -1540,7 +1581,7 @@ article .panel {
 }
 
 .category-title {
-  font-family: "Roboto";
+  font-family: "Poppins", "Georgia", sans-serif;
   color: #FF8000;
   text-transform: uppercase;
   padding: 0px;
@@ -1603,7 +1644,7 @@ article.columns + article.columns:last-child {
 .category-row.category-mix .panel .post-item-title {
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   text-transform: capitalize;
 }
 
@@ -1674,7 +1715,7 @@ article.columns + article.columns:last-child {
 
 .event-widget .day, .event-widget .full-day, .event-widget .month {
   text-transform: capitalize;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   line-height: 0.6em;
 }
 
@@ -1740,7 +1781,7 @@ aside .row.widget {
 
 aside .widget-title {
   color: #FFF;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   text-transform: uppercase;
   display: block;
   margin-bottom: 15px;
@@ -1876,7 +1917,7 @@ footer#footer {
 footer .copyright {
   clear: both;
   font-size: 0.75em;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 footer#footer .copyright a {
@@ -1936,7 +1977,7 @@ footer#footer .footer-bar {
 }
 
 footer#footer .footer-bar .widget-title {
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   text-transform: uppercase;
   /* border-bottom: solid 1px rgba(#FFF,0.3); */
   padding-bottom: 10px;
@@ -1981,7 +2022,7 @@ footer#footer a#back-to-top {
 */
 .button, button {
   background-color: #FF8000;
-  font-family: "Roboto";
+  font-family: "Poppins", "Georgia", sans-serif;
 }
 
 button.small, .button.small {
@@ -1998,7 +2039,7 @@ article .panel .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Roboto";
+  font-family: "Poppins", "Georgia", sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 0.8rem;
@@ -2072,7 +2113,7 @@ table thead tr th {
   background-color: #FF8000;
   color: white;
   text-transform: uppercase;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 /*
@@ -2093,7 +2134,7 @@ table thead tr th {
 }
 
 .page-numbers, .nav-links div {
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
   display: inline-block;
   padding: 5px 10px;
   margin: 0 2px 0 0;
@@ -2126,7 +2167,7 @@ ul.pagination li.current button {
 
 ul.pagination li a, ul.pagination li {
   font-size: 1em;
-  font-family: "Montserrat", "Georgia", sans-serif;
+  font-family: "Merriweather", "serif";
 }
 
 ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {

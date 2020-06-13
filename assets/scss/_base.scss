@@ -1,7 +1,7 @@
 $author-image-radius : 60px;
 $icon-font: 'FontAwesome';
-$primary-font: 'Montserrat','Georgia', sans-serif;
-$secondary-font: 'Roboto';
+$primary-font: 'Merriweather', 'serif';
+$secondary-font: 'Poppins','Georgia', sans-serif;
 $shadow-color: #c9c9c9;
 $border-color: #ededed;
 $gray-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
@@ -58,39 +58,22 @@ a {
 a:hover, a:focus {
 	color: $dark-color;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	
+
+@for $i from 1 through 6 {
+	h#{$i} {
+	font-family: $secondary-font;
+	}
 }
-.panel h1,
-.panel h2,
-.panel h3,
-.panel h4,
-.panel h5,
-.panel h6 {
+
+@for $i from 1 through 6 {
+	.panel h#{$i} {
 	line-height: 1;
 	margin-bottom: 0.625rem;
 	font-family: $primary-font;
 	color: $link-color;
-	text-transform: uppercase
+	}
 }
 
-@font-face {
-	font-family: 'Montserrat';
-	font-weight: 200;
-}
-@font-face {
-	font-family: 'Montserrat';
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'Montserrat';
-	font-weight: bold;
-}
 
 /*
 ================================================================================================
@@ -98,10 +81,10 @@ h6 {
 ================================================================================================
 */
 body {
-	background-image: url("../img/gray-pattern.jpg");
 	background-position: left top;
 	background-repeat: repeat;
 	background-attachment: scroll;
+	font-family: $primary-font;
 }
 #boxed-wrapper {
 	background: #fff;

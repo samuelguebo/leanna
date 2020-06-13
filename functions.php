@@ -140,8 +140,7 @@ add_action( 'widgets_init', 'leanna_widgets_init' );
 function leanna_scripts() {
     
     // Google fonts
-    wp_enqueue_style( 'iam-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500|Montserrat:ital,wght@0,300;0,400;0,500;1,700', false ); 
-
+	wp_enqueue_style( 'iam-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:wght@300;700|Merriweather', false );
 
     // CSS
 	wp_enqueue_style( 'normalize', get_template_directory_uri().'/assets/css/normalize.min.css' );
@@ -150,7 +149,7 @@ function leanna_scripts() {
 	wp_enqueue_style( 'motion-ui', 'https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.css' );
 	wp_enqueue_style( 'slick-slider', get_template_directory_uri().'/assets/css/slick.css');
     
-    $style = "style-blue";
+    $style = "style-lavender";
     if(""!=get_theme_mod('leanna_theme_color')){
         $color = esc_attr(get_theme_mod('leanna_theme_color'));
         $style = 'style-'.$color;
