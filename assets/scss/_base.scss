@@ -504,10 +504,11 @@ header .socials {
 7.0 - Navigation (Toggle), breakpoint for responsive menu
 ================================================================================================
 */
-
+/*
 meta.foundation-mq-topbar {
 	width: 65em;
 }
+*/
 .top-bar .toggle-topbar.menu-icon a span::after {
 	margin-top: 0px;
 	top: 0%;
@@ -526,7 +527,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 65em) {
 
   .top-bar {
-	background: #FFF;
+	/*background: #FFF;*/
 	overflow: visible; 
 	height: 100%;
   }

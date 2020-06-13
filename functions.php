@@ -143,7 +143,6 @@ function leanna_scripts() {
 	wp_enqueue_style( 'iam-google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:wght@300;700|Merriweather', false );
 
     // CSS
-	wp_enqueue_style( 'normalize', get_template_directory_uri().'/assets/css/normalize.min.css' );
 	wp_enqueue_style( 'foundation-css', get_template_directory_uri().'/assets/css/foundation.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'motion-ui', 'https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.css' );
