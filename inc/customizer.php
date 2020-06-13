@@ -1,13 +1,13 @@
 <?php
 /*
 ================================================================================================
-Maria Theme Customizer
+Leanna Theme Customizer
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/Theme_Customization_API
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
@@ -17,25 +17,25 @@ Maria Theme Customizer
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-function maria_kirki_customize_register () {
+function leanna_kirki_customize_register () {
 	
 	// kirki configs
-	Maria_Kirki::add_config( 'maria', array(
+	Leanna_Kirki::add_config( 'leanna', array(
 		'capability'    => 'edit_theme_options',
 		'option_type'   => 'theme_mod',
 	) );
 	
 	// Repeater section for slider settings
-	Maria_Kirki::add_section('slider_section', array(
-		'title' => __('Sliders', 'maria'),
+	Leanna_Kirki::add_section('slider_section', array(
+		'title' => __('Sliders', 'leanna'),
 		'priority' => 30,
 	));
 
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'repeater',
 			'settings'      => 'slider_repeater',
-			'label'         => esc_attr__( 'Create a slide', 'maria' ),
-			'description'   => esc_attr__( 'Set up the slide, define title, description, page, etc', 'maria' ),
+			'label'         => esc_attr__( 'Create a slide', 'leanna' ),
+			'description'   => esc_attr__( 'Set up the slide, define title, description, page, etc', 'leanna' ),
 			'section'       => 'slider_section',
 			'default'       => array(),
 			'priority'      => 10,
@@ -48,56 +48,56 @@ function maria_kirki_customize_register () {
 				// field: slide title
 				'slide_title' => array(
 					'type'              => 'text',
-					//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-					'description'       => esc_attr__( 'Small upper text', 'maria' ),
-					'default'           => esc_attr__( 'For people who do real business', 'maria' ),
+					//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+					'description'       => esc_attr__( 'Small upper text', 'leanna' ),
+					'default'           => esc_attr__( 'For people who do real business', 'leanna' ),
 					'sanitize_callback' => 'sanitize_text_field'
 				),
 				// field: slide description
 				'slide_description' => array(
 					'type'              => 'text',
-					//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-					'description'       => esc_attr__( 'Big lower text', 'maria' ),
-					'default'           => esc_attr__( 'Simple, intuitive, creative', 'maria' ),
+					//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+					'description'       => esc_attr__( 'Big lower text', 'leanna' ),
+					'default'           => esc_attr__( 'Simple, intuitive, creative', 'leanna' ),
 					'sanitize_callback'	=> 'sanitize_text_field'
 				),
 				// field: button text 1
 				'slide_button_text_1' => array(
 						'type'        => 'text',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Text for button 1', 'maria' ),
-						'default'     => esc_attr__( 'Read more', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Text for button 1', 'leanna' ),
+						'default'     => esc_attr__( 'Read more', 'leanna' ),
 						'sanitize_callback' => 'sanitize_text_field'
 				),
 				// field: page 1
 				'slide_page_1' => array(
 						'type'        => 'dropdown-pages',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Page for button 1', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Page for button 1', 'leanna' ),
 						'default'     => 0,
 						'sanitize_callback' => 'absint'
 				),
 				// field: button text 2
 				'slide_button_text_2' => array(
 						'type'        => 'text',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Text for button 2', 'maria' ),
-						'default'     => esc_attr__( 'Read more', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Text for button 2', 'leanna' ),
+						'default'     => esc_attr__( 'Read more', 'leanna' ),
 						'sanitize_callback' => 'sanitize_text_field'
 				),
                 // field: page 2
 				'slide_page_2' => array(
 						'type'        => 'dropdown-pages',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Page for button 2', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Page for button 2', 'leanna' ),
 						'default'     => 0,
 						'sanitize_callback' => 'absint'
 				),
 				// field: background
 				'slide_image' => array(
 						'type'        => 'image',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Image of the slide', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Image of the slide', 'leanna' ),
 				)
 			)
 		)
@@ -110,30 +110,30 @@ function maria_kirki_customize_register () {
      * and description
      */
     
-	Maria_Kirki::add_section('services_section', array(
-		'title' => __('Services', 'maria'),
+	Leanna_Kirki::add_section('services_section', array(
+		'title' => __('Services', 'leanna'),
 		'priority' => 30,
 	));
 
 	// Field for services sections: title 
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'text',
 			'settings'      => 'services_section_title',
-			'label'         => __( 'Head text for services section', 'maria' ),
-			//'description'   => __( 'Add Head text for services section', 'maria' ),
-			'default'       => __( 'Our services', 'maria' ),
+			'label'         => __( 'Head text for services section', 'leanna' ),
+			//'description'   => __( 'Add Head text for services section', 'leanna' ),
+			'default'       => __( 'Our services', 'leanna' ),
 			'section'       => 'services_section',
 			'priority'      => 10,
 			'sanitize_callback' => 'sanitize_text_field'
 			)
 	);
 	// Field for services sections: description
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'textarea',
 			'settings'      => 'services_section_description',
-			'label'         => __( 'Head description for services section', 'maria' ),
-			//'description'   => __( 'Add Head description for services section', 'maria' ),
-			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'maria' ),
+			'label'         => __( 'Head description for services section', 'leanna' ),
+			//'description'   => __( 'Add Head description for services section', 'leanna' ),
+			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'leanna' ),
 			'section'       => 'services_section',
 			'priority'      => 10,
 			'sanitize_callback' => 'sanitize_text_field'
@@ -141,11 +141,11 @@ function maria_kirki_customize_register () {
 	);
     
 	// Repeater for services
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'repeater',
 			'settings'      => 'services_repeater',
-			'label'         => __( 'Create a service', 'maria' ),
-			'description'   => __( 'Set up the service, define title, description, page, etc', 'maria' ),
+			'label'         => __( 'Create a service', 'leanna' ),
+			'description'   => __( 'Set up the service, define title, description, page, etc', 'leanna' ),
 			'section'       => 'services_section',
 			'default'       => array(),
 			'priority'      => 10,
@@ -158,29 +158,29 @@ function maria_kirki_customize_register () {
 				// field: image
 				'service_image' => array(
 						'type'        => 'image',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Image of the slide', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Image of the slide', 'leanna' ),
 				),
 				'service_title'	=> array(
 					'type'              => 'text',
-					//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-					'description'       => esc_attr__( 'Upper text', 'maria' ),
+					//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+					'description'       => esc_attr__( 'Upper text', 'leanna' ),
 					'default'           => 'Business strategy',
 					'sanitize_callback' => 'sanitize_text_field'
 				),
 				// field: services_description
 				'service_description' => array(
 					'type'              => 'textarea',
-					//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-					'description'       => esc_attr__( 'Description', 'maria' ),
+					//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+					'description'       => esc_attr__( 'Description', 'leanna' ),
 					'default'           => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 					'sanitize_callback'	=> 'sanitize_text_field'
 				),
 				// field: page
 				'service_page'	=> array(
 						'type'        => 'dropdown-pages',
-						//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-						'description' => esc_attr__( 'Page of the service', 'maria' ),
+						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+						'description' => esc_attr__( 'Page of the service', 'leanna' ),
 						'default'     => 0,
 						'sanitize_callback' => 'absint'
 				)
@@ -191,15 +191,15 @@ function maria_kirki_customize_register () {
 	
 	
 	// Create a repeater section for social networks
-	Maria_Kirki::add_section('social_section', array(
-		'title' => __('Social medias', 'maria'),
+	Leanna_Kirki::add_section('social_section', array(
+		'title' => __('Social medias', 'leanna'),
 		'priority' => 30,
 	));
 	// Create a repeater for socials
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'repeater',
 			'settings'      => 'social_repeater',
-			'label'         => __( 'Add a social media', 'maria' ),
+			'label'         => __( 'Add a social media', 'leanna' ),
 			'section'       => 'social_section',
 			'default'       => array(),
 			'priority'      => 10,
@@ -212,8 +212,8 @@ function maria_kirki_customize_register () {
 				// field: social_title
 				'social_title'	=> array(
 					'type'              => 'text',
-					//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-					'description'       => esc_attr__( 'Title', 'maria' ),
+					//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+					'description'       => esc_attr__( 'Title', 'leanna' ),
 					'default'           => 'Social',
 					'sanitize_callback' => 'sanitize_text_field'
 				),
@@ -221,7 +221,7 @@ function maria_kirki_customize_register () {
 				// field: social_url
 				'social_url'	=> array(
 						'type'        => 'text',
-						'description' => esc_attr__( 'Url of the social profile or page', 'maria' ),
+						'description' => esc_attr__( 'Url of the social profile or page', 'leanna' ),
 						'default'     => '#',
 						'sanitize_callback' => 'sanitize_text_field'
 				)
@@ -237,31 +237,31 @@ function maria_kirki_customize_register () {
      */
     
 	// Create a repeater section for blog
-	Maria_Kirki::add_section('blog_section', array(
-		'title' => __('Blog', 'maria'),
+	Leanna_Kirki::add_section('blog_section', array(
+		'title' => __('Blog', 'leanna'),
 		'priority' => 30,
 	));
 
 
 	// Field for blog sections: title 
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'text',
 			'settings'      => 'blog_section_title',
-			'label'         => __( 'Head text for blog section', 'maria' ),
-			//'description'   => __( 'Add Head text for blog section', 'maria' ),
-			'default'       => __( 'Our blog', 'maria' ),
+			'label'         => __( 'Head text for blog section', 'leanna' ),
+			//'description'   => __( 'Add Head text for blog section', 'leanna' ),
+			'default'       => __( 'Our blog', 'leanna' ),
 			'section'       => 'blog_section',
 			'priority'      => 10,
 			'sanitize_callback' => 'sanitize_text_field'
 			)
 	);
 	// Field for blog sections: description
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'          => 'textarea',
 			'settings'      => 'blog_section_description',
-			'label'         => __( 'Head description for blog section', 'maria' ),
-			//'description'   => __( 'Add Head description for blog section', 'maria' ),
-			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'maria' ),
+			'label'         => __( 'Head description for blog section', 'leanna' ),
+			//'description'   => __( 'Add Head description for blog section', 'leanna' ),
+			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'leanna' ),
 			'section'       => 'blog_section',
 			'priority'      => 10,
 			'sanitize_callback' => 'sanitize_text_field'
@@ -270,20 +270,20 @@ function maria_kirki_customize_register () {
 
 
 	// Field: blog page
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 			'type'        => 'dropdown-pages',
-			//'label'       => esc_attr__( 'Display text for section', 'maria' ),
-			'description' => esc_attr__( 'Select blog page', 'maria' ),
+			//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+			'description' => esc_attr__( 'Select blog page', 'leanna' ),
 			'default'     => 0,
 			'sanitize_callback' => 'absint'
 			)
 		);
 	
 	// Field: blog post number
-	Maria_Kirki::add_field( 'maria', array(
+	Leanna_Kirki::add_field( 'leanna', array(
 		'type'        => 'number',
 		'settings'    => 'blog_post_number',
-		'label'       => esc_attr__( 'How many posts to display on homepage?', 'maria' ),
+		'label'       => esc_attr__( 'How many posts to display on homepage?', 'leanna' ),
 		'section'     => 'blog_section',
 		'default'     => 8,
 		'choices'     => array(
@@ -293,7 +293,7 @@ function maria_kirki_customize_register () {
 		),
 	) );
 }
-function maria_customize_register( $wp_customize ) {
+function leanna_customize_register( $wp_customize ) {
 	
 	
 	/*
@@ -308,32 +308,32 @@ function maria_customize_register( $wp_customize ) {
 	// Add controls to existing Header Textcolor section
 	$wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
 	$wp_customize->add_setting(
-		'maria_theme_color', array(
+		'leanna_theme_color', array(
 			'default' => 'blue',
-			'sanitize_callback'	=> 'maria_sanitize_colors'
+			'sanitize_callback'	=> 'leanna_sanitize_colors'
 
 		)
 	);
 	
 	$wp_customize->add_control(
 		new Palette_Custom_Control(
-			$wp_customize, 'maria_theme_color', array(
-				'label' => __( 'Theme color', 'maria' ),
+			$wp_customize, 'leanna_theme_color', array(
+				'label' => __( 'Theme color', 'leanna' ),
 				'section' => 'colors',
-				'settings' => 'maria_theme_color',
+				'settings' => 'leanna_theme_color',
 			)
 		)
 	);    
    
 }
-add_action( 'init', 'maria_kirki_customize_register' );
-add_action( 'customize_register', 'maria_customize_register' );
+add_action( 'init', 'leanna_kirki_customize_register' );
+add_action( 'customize_register', 'leanna_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function maria_customize_preview_js() {
-	wp_enqueue_script( 'maria_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170714', true );
+function leanna_customize_preview_js() {
+	wp_enqueue_script( 'leanna_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20200714', true );
 }
 
 /* Validate user input */

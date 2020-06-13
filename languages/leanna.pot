@@ -105,7 +105,7 @@ msgstr ""
 
 #. Author URI of the theme
 #: footer.php:22
-msgid "http://samuelguebo.co"
+msgid "https://samuelguebo.ci"
 msgstr ""
 
 #: footer.php:22
@@ -355,16 +355,16 @@ msgid "About the author"
 msgstr ""
 
 #. Name of the theme
-msgid "Maria"
+msgid "Leanna"
 msgstr ""
 
 #. Description of the theme
 msgid ""
-"Maria is a clean, simple, and fully responsive corporate WordPress theme."
+"Leanna is a clean, simple, and fully responsive corporate WordPress theme."
 msgstr ""
 
 #. URI of the theme
-msgid "https://github.com/samuelguebo/maria"
+msgid "https://github.com/samuelguebo/leanna"
 msgstr ""
 
 #. Author of the theme

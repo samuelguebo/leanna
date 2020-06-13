@@ -4,11 +4,11 @@
 The template for displaying all pages.  This is the template that displays all pages by default.
 and that other 'pages' on your WordPress site may use a different template.
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/Template_Hierarchy
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
@@ -27,7 +27,7 @@ get_header(); ?>
     <section class="row single-row">
         <section id="breadcrumbs" class="clearfix">
             <div class="breadcrumbs">
-                <?php if (function_exists('maria_custom_breadcrumbs')) maria_custom_breadcrumbs(); ?>
+                <?php if (function_exists('leanna_custom_breadcrumbs')) leanna_custom_breadcrumbs(); ?>
             </div>
         </section>
         <section class="large-8 columns main-column">

@@ -3,18 +3,18 @@
 ================================================================================================
 Template part for displaying a slide item in the Slider loop
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
 
 ?>
 <section class="post-item">
-        <img src="<?php echo maria_get_thumb_by_id($post['slide_image'],'slider-cover');?>" alt="<?php echo $post['slide_title'];?>" class="responsive delay"/>
+        <img src="<?php echo leanna_get_thumb_by_id($post['slide_image'],'slider-cover');?>" alt="<?php echo $post['slide_title'];?>" class="responsive delay"/>
         <div class="slider-caption post-item-caption">
             <div class="panel">
                 <h4 class="post-item-description"><?php echo $post['slide_title'];?></h4>

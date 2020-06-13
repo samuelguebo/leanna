@@ -4,11 +4,11 @@
 The template for displaying the footer. It contains the closing of the body all content 
 after and containing the bottom widget area
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://developer.wordpress.org/themes/basics/template-files/#template-partials
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
@@ -18,8 +18,8 @@ after and containing the bottom widget area
 				</div><!-- .footer-bar -->
 				<div class="main-row row">
 						<div class="small-12 medium-6 large-10 columns">
-							<p class="copyright"><?php _e('&copy; ','maria')?> <?php echo get_the_date('Y'); ?> <?php echo bloginfo('name'); ?>
-                            / <?php _e('Developed by ','maria')?><a href="<?php echo esc_url( __( 'http://samuelguebo.co', 'maria' ) ); ?>">Samuel Guebo</a> ( <a href="https://github.com/samuelguebo/maria"><i class="fa fa-github"></i> <?php _e('source code','maria')?> </a>)
+							<p class="copyright"><?php _e('&copy; ','leanna')?> <?php echo get_the_date('Y'); ?> <?php echo bloginfo('name'); ?>
+                            / <?php _e('Developed by ','leanna')?><a href="<?php echo esc_url( __( 'https://samuelguebo.ci', 'leanna' ) ); ?>">Samuel Guebo</a> ( <a href="https://github.com/samuelguebo/leanna"><i class="fa fa-github"></i> <?php _e('source code','leanna')?> </a>)
 							</p><!-- copyright-->
                             
 						</div>

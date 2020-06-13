@@ -3,11 +3,11 @@
 ================================================================================================
 Template part for displaying articles in loop
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
@@ -42,7 +42,7 @@ Template part for displaying articles in loop
                     <div class="post-categories breadcrumbs">
                         <?php $categories = get_the_category();
                             if ( $categories ): ?>
-                                <span><?php _e('categories','maria');?></span>
+                                <span><?php _e('categories','leanna');?></span>
                                 <?php foreach($categories as $cat):
                                     echo '<span><a href="'.get_category_link($cat->term_id).'">'.$cat->name.'</a></span>';
                                 endforeach;
@@ -52,7 +52,7 @@ Template part for displaying articles in loop
                     <div class="post-tags breadcrumbs">
                         <?php $tags = get_the_tags(get_the_ID());
                             if ( $tags ): ?>
-                                <span><?php _e('tags','maria');?></span>
+                                <span><?php _e('tags','leanna');?></span>
                                 <?php foreach($tags as $tag):
                                     echo '<span><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a></span>';
                                 endforeach;
@@ -63,7 +63,7 @@ Template part for displaying articles in loop
                 <div class="panel post-item-author row reveal">
                     <div class="medium-4 large-3 columns"> <?php echo get_avatar( get_the_author_meta('ID'), 120 ); ?> </div>
                     <div class="medium-8 large-9 columns">
-                        <h3><?php _e('About the author','maria'); ?></h3>
+                        <h3><?php _e('About the author','leanna'); ?></h3>
                         <div><?php echo nl2br(get_the_author_meta('description')); ?></div>
                     </div>
                 </div><!-- gravatar -->

@@ -3,16 +3,16 @@
 ================================================================================================
 Template part for displaying team member section
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
-$blog_section_title = esc_attr(Maria_Kirki::get_option( 'blog_section_title'));
-$blog_section_description = esc_attr(Maria_Kirki::get_option( 'blog_section_description'));
-$blog_post_number = esc_attr(Maria_Kirki::get_option( 'blog_post_number'));
+$blog_section_title = esc_attr(Leanna_Kirki::get_option( 'blog_section_title'));
+$blog_section_description = esc_attr(Leanna_Kirki::get_option( 'blog_section_description'));
+$blog_post_number = esc_attr(Leanna_Kirki::get_option( 'blog_post_number'));
 ?>
 <section class="row main-row clearfix white-section">
 			<section class="columns main-column white-section-intro large-8 small-12 large-centered columns clearfix">
@@ -34,7 +34,7 @@ $blog_post_number = esc_attr(Maria_Kirki::get_option( 'blog_post_number'));
                 $blog_posts = new WP_Query($args);
                 while ( $blog_posts->have_posts() ) : $blog_posts->the_post();
 
-					maria_get_template_part('template-parts/content-article-home.php', 'large-3 medium-3 small-12', 'post-thumb');
+					leanna_get_template_part('template-parts/content-article-home.php', 'large-3 medium-3 small-12', 'post-thumb');
 
 				endwhile;
 

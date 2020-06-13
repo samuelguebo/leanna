@@ -3,11 +3,11 @@
 ================================================================================================
 The template for displaying the menu. It contains the menu items
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>

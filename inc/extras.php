@@ -4,11 +4,11 @@
 Custom functions that act independently of the theme templates. Eventually, 
 some of the functionality here could be replaced by core features.
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://developer.wordpress.org/themes/basics/theme-functions/
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 /**
@@ -17,7 +17,7 @@ some of the functionality here could be replaced by core features.
  * @param array $classes Classes for the body element.
  * @return array
  */
-function maria_body_classes( $classes ) {
+function leanna_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -30,20 +30,20 @@ function maria_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'maria_body_classes' );
+add_filter( 'body_class', 'leanna_body_classes' );
 
-add_action( 'wp_head', 'maria_pingback_header' );
+add_action( 'wp_head', 'leanna_pingback_header' );
 
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function maria_pingback_header() {
+function leanna_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'maria_pingback_header' );
+add_action( 'wp_head', 'leanna_pingback_header' );
 
 /**
  * Override the default excerpt length
@@ -53,7 +53,7 @@ function new_excerpt_length($length) {
 	return 25;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
-function maria_new_excerpt_length($max_char, $more_link_text = '...',$notagp = false, $stripteaser = 0, $more_file = '') {
+function leanna_new_excerpt_length($max_char, $more_link_text = '...',$notagp = false, $stripteaser = 0, $more_file = '') {
 			$content = get_the_content($more_link_text, $stripteaser, $more_file);
 			$content = apply_filters('the_content', $content);
 			$content = str_replace(']]>', ']]&gt;', $content);
@@ -172,10 +172,10 @@ class Multilevel_Menu extends Walker_Nav_Menu
  * The pagination logic is inspired from WP Page Numbers plugin and and article of * Codular.
  * 
  * @link https://wordpress.org/plugins/wp-page-numbers
- * @link http://codular.com/implementing-pagination
+ * @link https://codular.com/implementing-pagination
  */
 
-function maria_pagination($count_post, $paged)
+function leanna_pagination($count_post, $paged)
 {
 	$pagingString   = "<ul class=\"pagination\">\n";
 	$postsPerPage   = get_option('posts_per_page');
@@ -219,14 +219,14 @@ function maria_pagination($count_post, $paged)
  * This functions prints a breadcrumb
  * The script is inspired from a Quality Trust article
  * 
- * @link http://www.qualitytuts.com/wordpress-custom-breadcrumbs-without-plugin/
+ * @link https://www.qualitytuts.com/wordpress-custom-breadcrumbs-without-plugin/
  */
-if(!function_exists('maria_custom_breadcrumbs')) {
-	function maria_custom_breadcrumbs() {
+if(!function_exists('leanna_custom_breadcrumbs')) {
+	function leanna_custom_breadcrumbs() {
  
   $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
   $delimiter = '/'; // delimiter between crumbs
-  $home = __('Home','maria'); // text for the 'Home' link
+  $home = __('Home','leanna'); // text for the 'Home' link
   $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
   $before = '<span class="active">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
@@ -315,10 +315,10 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	} elseif ( is_author() ) {
 	   global $author;
 	  $userdata = get_userdata($author);
-	  echo $before . __('Articles posted by ','maria') . $userdata->display_name . $after;
+	  echo $before . __('Articles posted by ','leanna') . $userdata->display_name . $after;
  
 	} elseif ( is_404() ) {
-	  echo $before .__('Error 404','maria')  . $after;
+	  echo $before .__('Error 404','leanna')  . $after;
 	}
  
   }
@@ -327,7 +327,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
    * Print social links
    *
    */
-	function maria_social_links() {
+	function leanna_social_links() {
 		$socials = array('facebook','twitter','youtube','github');
 		
 		foreach($socials as $social){
@@ -343,17 +343,17 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 * Getters for customizer options
 	 *
 	 */
-	 function maria_get_events_label(){
+	 function leanna_get_events_label(){
 		 return get_theme_mod( 'events_label' );
 	 }
-	function maria_get_events_page(){
+	function leanna_get_events_page(){
 		return get_theme_mod( 'events_page' );
 	 }
 	
-	function maria_get_programmes_label(){
+	function leanna_get_programmes_label(){
 		return get_theme_mod( 'programmes_label' );
 	 }
-	function maria_get_programmes_page(){
+	function leanna_get_programmes_page(){
 		return  get_theme_mod( 'programmes_page' );
 	 }
 		
@@ -361,13 +361,13 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 * Override the default post_thumbnail() content
 	 *
 	 */
-	function maria_get_attachment_id_from_src( $image_src ) {
+	function leanna_get_attachment_id_from_src( $image_src ) {
 		global $wpdb;
 		$query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$image_src'";
 		$id = $wpdb->get_var($query);
 		return $id;
 	}
-	function maria_get_first_image($post_id) {
+	function leanna_get_first_image($post_id) {
 		$post = get_post($post_id);
 		$post_content = $post->post_content;
 		preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
@@ -377,22 +377,22 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 		
 	}
 
-	function maria_modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
+	function leanna_modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
 		if( '' == $html ) {
 			$attr['class'] = 'default';
 			global $post, $posts;
 			ob_start();
 			ob_end_clean();
 			
-			maria_get_first_image($post_id);
-			$first_img = maria_get_first_image($post_id);
+			leanna_get_first_image($post_id);
+			$first_img = leanna_get_first_image($post_id);
 			if ( !empty( $first_img ) ){
 				$html = '<img src="' . $first_img . '" alt="' . $alt . '" class="' . $attr['class'] . '" />';
 			}
 		}
 		return $html;
 	}
-	add_filter('post_thumbnail_html', 'maria_modify_post_thumbnail_html', 10, 5);
+	add_filter('post_thumbnail_html', 'leanna_modify_post_thumbnail_html', 10, 5);
 
 	/*
 	 * Check if thumbnail or firstImage exist
@@ -400,7 +400,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 */
 	function has_post_thumbnail_or_image(){
 		global $post;
-		$first_img = maria_get_first_image($post->ID);
+		$first_img = leanna_get_first_image($post->ID);
 		if(!has_post_thumbnail())
 			if (empty( $first_img ) ){
 				return false;
@@ -413,7 +413,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 
 	add_image_size( 'admin-list-thumb', 80, 80, false );
 
-	function maria_add_thumbnail_columns( $columns ) {
+	function leanna_add_thumbnail_columns( $columns ) {
 
 		if ( !is_array( $columns ) )
 			$columns = array();
@@ -421,13 +421,13 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 
 		foreach( $columns as $key => $title ) {
 			if ( $key == 'title' ) // Put the Thumbnail column before the Title column
-				$new['featured_thumb'] = __( 'Image','maria');
+				$new['featured_thumb'] = __( 'Image','leanna');
 			$new[$key] = $title;
 		}
 		return $new;
 	}
 
-	function maria_add_thumbnail_columns_data( $column, $post_id ) {
+	function leanna_add_thumbnail_columns_data( $column, $post_id ) {
 		switch ( $column ) {
 		case 'featured_thumb':
 			echo '<a href="' . $post_id . '">';
@@ -438,15 +438,15 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	}
 
 	if ( function_exists( 'add_theme_support' ) ) {
-		add_filter( 'manage_posts_columns' , 'maria_add_thumbnail_columns' );
-		add_action( 'manage_posts_custom_column' , 'maria_add_thumbnail_columns_data', 10, 2 );
+		add_filter( 'manage_posts_columns' , 'leanna_add_thumbnail_columns' );
+		add_action( 'manage_posts_custom_column' , 'leanna_add_thumbnail_columns_data', 10, 2 );
 	}
 
    /* 
 	* Force WordPress to display future posts 
 	*
 	*/
-	function maria_show_future_posts($posts)
+	function leanna_show_future_posts($posts)
 	{
 	   global $wp_query, $wpdb;
 	   if(is_single() && $wp_query->post_count == 0)
@@ -455,12 +455,12 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	   }
 	   return $posts;
 	}
-	add_filter('the_posts', 'maria_show_future_posts');
+	add_filter('the_posts', 'leanna_show_future_posts');
 	/*
 	 * Customize the comments with this fallback
 	 *
 	 */
-	function maria_custom_comments( $comment, $args, $depth ) {
+	function leanna_custom_comments( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	echo '<div class="comment-list">';
 		switch( $comment->comment_type ) :
@@ -490,7 +490,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 					</span>
 					<div class="reply"><?php 
 					comment_reply_link( array_merge( $args, array( 
-					'reply_text' => __( 'Reply', 'maria' ),
+					'reply_text' => __( 'Reply', 'leanna' ),
 					'depth' => $depth,
 					'max_depth' => $args['max_depth'] 
 					) ) ); ?>
@@ -509,7 +509,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 * Get an array of categories to be used in Customizer API (via Kirki)
 	 *
 	 */
-	function maria_categories_array() {
+	function leanna_categories_array() {
 		$categories = array();
 		$terms = get_terms( array('taxonomy' => 'category') );
 		foreach ($terms as $category) {
@@ -521,7 +521,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 * A variant of get_template_part that includes the thumbnail and section class
 	 *
 	 */
-	function maria_get_template_part($file, $container_class, $thumbnail_size){
+	function leanna_get_template_part($file, $container_class, $thumbnail_size){
 		// make sure the required data are in place
 		if(""!==$file){
 			include(locate_template($file));
@@ -531,7 +531,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	 * Split strings into several words and highlight the first one
 	 *
 	 */
-	function maria_highlight_first_word($string){
+	function leanna_highlight_first_word($string){
 		// make sure the required data are in place
 		$words = explode(" ", $string);
 		for ($i=0; $i < count($words); $i++) { 
@@ -545,7 +545,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 
 	}
 
-	function maria_get_thumb_by_id ($image_id, $size){
+	function leanna_get_thumb_by_id ($image_id, $size){
 		$image_thumb = wp_get_attachment_image_src($image_id, $size);
 
  		// display the image
@@ -555,7 +555,7 @@ if(!function_exists('maria_custom_breadcrumbs')) {
 	}
     /**
      * Remove "Category:", "Tag:", "Author:" from the archive title 
-     * solution borrowed from Hestia: http://docs.themeisle.com/article/793-how-to-remove-category-tag-author-from-the-archive-title-in-hestia
+     * solution borrowed from Hestia: https://docs.themeisle.com/article/793-how-to-remove-category-tag-author-from-the-archive-title-in-hestia
      */
     add_filter( 'get_the_archive_title', function ($title) {
         if ( is_category() ) {

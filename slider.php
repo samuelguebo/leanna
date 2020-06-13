@@ -3,17 +3,17 @@
 ================================================================================================
 The slider containing the carousel animation
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://developer.wordpress.org/themes/basics/template-files/#template-partials
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
 	<?php //starting slider loop;
 	
-	$sliders = Maria_Kirki::get_option( 'slider_repeater');
+	$sliders = Leanna_Kirki::get_option( 'slider_repeater');
 	if(is_array($sliders)):?>
 		<!-- Slides: Images and Captions -->
 		<section id="slider" class="row slider-wrapper">

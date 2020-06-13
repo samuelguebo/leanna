@@ -1,17 +1,17 @@
 <?php
 /*
 ================================================================================================
-Maria functions and definitions
+Leanna functions and definitions
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://developer.wordpress.org/themes/basics/theme-functions/
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
-if ( ! function_exists( 'maria_setup' ) ) :
+if ( ! function_exists( 'leanna_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -19,14 +19,14 @@ if ( ! function_exists( 'maria_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function maria_setup() {
+function leanna_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Maria, use a find and replace
-	 * to change 'maria' to the name of your theme in all the template files.
+	 * If you're building a theme based on Leanna, use a find and replace
+	 * to change 'leanna' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'maria', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'leanna', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -51,7 +51,7 @@ function maria_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'maria' ),
+		'primary' => esc_html__( 'Primary', 'leanna' ),
 	) );
 
 	/*
@@ -72,7 +72,7 @@ function maria_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'maria_setup' );
+add_action( 'after_setup_theme', 'leanna_setup' );
 
 /**
  * Recommend the Kirki plugin
@@ -89,11 +89,11 @@ require get_template_directory() . '/inc/kirki-fallback.php';
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function maria_widgets_init() {
+function leanna_widgets_init() {
     register_sidebar( array(
-		'name'          => esc_html__( 'Home sidebar', 'maria' ),
+		'name'          => esc_html__( 'Home sidebar', 'leanna' ),
 		'id'            => 'sidebar-home',
-		'description'   => esc_html__( 'Add widgets here.', 'maria' ),
+		'description'   => esc_html__( 'Add widgets here.', 'leanna' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h5 class="widget-title">',
@@ -101,9 +101,9 @@ function maria_widgets_init() {
 	) );
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Single sidebar', 'maria' ),
+		'name'          => esc_html__( 'Single sidebar', 'leanna' ),
 		'id'            => 'sidebar-main',
-		'description'   => esc_html__( 'Add widgets here.', 'maria' ),
+		'description'   => esc_html__( 'Add widgets here.', 'leanna' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h5 class="widget-title">',
@@ -112,9 +112,9 @@ function maria_widgets_init() {
     
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Banner top', 'maria' ),
+		'name'          => esc_html__( 'Banner top', 'leanna' ),
 		'id'            => 'banner-top',
-		'description'   => esc_html__( 'Add the top banner ici.', 'maria' ),
+		'description'   => esc_html__( 'Add the top banner ici.', 'leanna' ),
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '<h5 class="widget-title">',
@@ -122,25 +122,25 @@ function maria_widgets_init() {
 	) );
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer', 'maria' ),
+		'name'          => esc_html__( 'Footer', 'leanna' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'maria' ),
+		'description'   => esc_html__( 'Add widgets here.', 'leanna' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s large-4 small-up-4 columns widget left">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h5 class="widget-title">',
 		'after_title'   => '</h5>',
 	) );
 }
-add_action( 'widgets_init', 'maria_widgets_init' );
+add_action( 'widgets_init', 'leanna_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 
-function maria_scripts() {
+function leanna_scripts() {
     
     // Google fonts
-    wp_enqueue_style( 'iam-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:500|Montserrat:ital,wght@0,300;0,400;0,500;1,700', false ); 
+    wp_enqueue_style( 'iam-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500|Montserrat:ital,wght@0,300;0,400;0,500;1,700', false ); 
 
 
     // CSS
@@ -151,8 +151,8 @@ function maria_scripts() {
 	wp_enqueue_style( 'slick-slider', get_template_directory_uri().'/css/slick.css');
     
     $style = "style-blue";
-    if(""!=get_theme_mod('maria_theme_color')){
-        $color = esc_attr(get_theme_mod('maria_theme_color'));
+    if(""!=get_theme_mod('leanna_theme_color')){
+        $color = esc_attr(get_theme_mod('leanna_theme_color'));
         $style = 'style-'.$color;
     } 
 	wp_enqueue_style( 'iam-style', get_template_directory_uri().'/css/'.$style.'.css' );
@@ -169,16 +169,16 @@ function maria_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-function maria_admin_js($hook) {
+function leanna_admin_js($hook) {
     /*
     if ( 'customize.php' != $hook ) {
         return;
     }
     */
-    wp_enqueue_script( 'maria_admin_js', get_template_directory_uri() . '/js/admin.js' );
+    wp_enqueue_script( 'leanna_admin_js', get_template_directory_uri() . '/js/admin.js' );
 
 }
-add_action( 'wp_enqueue_scripts', 'maria_scripts' );
+add_action( 'wp_enqueue_scripts', 'leanna_scripts' );
 
 /**
  * Implement the Custom Header feature.

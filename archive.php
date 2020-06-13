@@ -5,10 +5,10 @@ The archive template file
 ================================================================================================
 
 @link           @link https://codex.wordpress.org/Template_Hierarchy
-@package        Maria
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@package        Leanna
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
@@ -23,7 +23,7 @@ get_header(); ?>
             </section>
             <section id="breadcrumbs" >
                 <div class="breadcrumbs">
-                    <?php if (function_exists('maria_custom_breadcrumbs')) maria_custom_breadcrumbs(); ?>
+                    <?php if (function_exists('leanna_custom_breadcrumbs')) leanna_custom_breadcrumbs(); ?>
                 </div>
             </section>
             <section class="category-row row">                
@@ -37,9 +37,9 @@ get_header(); ?>
                                 while ( have_posts() ) : the_post();
 
                                     if(has_post_thumbnail()){
-                                        maria_get_template_part('template-parts/content-article.php', 'large-6 medium-6 small-12', 'post-thumb');
+                                        leanna_get_template_part('template-parts/content-article.php', 'large-6 medium-6 small-12', 'post-thumb');
                                     }else {
-                                        maria_get_template_part('template-parts/content-article-without-thumb.php', 'large-6 medium-6 small-12', 'post-thumb');
+                                        leanna_get_template_part('template-parts/content-article-without-thumb.php', 'large-6 medium-6 small-12', 'post-thumb');
                                     }
 
                                 endwhile;
@@ -53,8 +53,8 @@ get_header(); ?>
                     <div class="pagination-wrapper columns large-4 large-centered" >
                         <?php the_posts_pagination( array(
                             'mid_size' => 2,
-                            'prev_text' => __( '&laquo;', 'maria' ),
-                            'next_text' => __( '&raquo;', 'maria' ),
+                            'prev_text' => __( '&laquo;', 'leanna' ),
+                            'next_text' => __( '&raquo;', 'leanna' ),
                             'screen_reader_text' => ' '
                         ) ); ?>
                     </div>

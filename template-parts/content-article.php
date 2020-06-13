@@ -3,11 +3,11 @@
 ================================================================================================
 Template part for displaying articles in loop
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
@@ -30,7 +30,7 @@ Template part for displaying articles in loop
                 <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
             <?php endif;?>
             <h3 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-            <p><?php echo maria_new_excerpt_length(100);?></p> 
+            <p><?php echo leanna_new_excerpt_length(100);?></p> 
         </div>
     </div>
 </article>

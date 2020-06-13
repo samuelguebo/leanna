@@ -4,11 +4,11 @@
 Customizer custom control - Color Palette
 It display a 6-color palette in the theme customization panel
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/Theme_Customization_API
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 if ( ! class_exists( 'WP_Customize_Control' ) )
@@ -67,7 +67,7 @@ class Palette_Custom_Control extends WP_Customize_Control
 
 				<label>
 					  <?php
-						$current_color =  esc_attr(get_theme_mod('maria_theme_color'));
+						$current_color =  esc_attr(get_theme_mod('leanna_theme_color'));
 						$selected_css = "class = 'selected' ";
 					   ?>
 				  <h1 class="customize-layout-control">

@@ -122,8 +122,8 @@ msgstr "Développé par "
 
 #. Author URI of the theme
 #: footer.php:22
-msgid "http://samuelguebo.co"
-msgstr "http://samuelguebo.co"
+msgid "https://samuelguebo.ci"
+msgstr "https://samuelguebo.ci"
 
 #: footer.php:22
 msgid "source code"
@@ -362,19 +362,19 @@ msgid "About the author"
 msgstr "A propos de l'auteur"
 
 #. Name of the theme
-msgid "Maria"
-msgstr "Maria"
+msgid "Leanna"
+msgstr "Leanna"
 
 #. Description of the theme
 msgid ""
-"Maria is a clean, simple, and fully responsive corporate WordPress theme."
+"Leanna is a clean, simple, and fully responsive corporate WordPress theme."
 msgstr ""
-"Maria is un thème WordPress corporate élégant, simple, et totalement  "
+"Leanna is un thème WordPress corporate élégant, simple, et totalement  "
 "responsive."
 
 #. URI of the theme
-msgid "https://github.com/samuelguebo/maria"
-msgstr "https://github.com/samuelguebo/maria"
+msgid "https://github.com/samuelguebo/leanna"
+msgstr "https://github.com/samuelguebo/leanna"
 
 #. Author of the theme
 msgid "Samuel Guébo"

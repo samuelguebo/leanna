@@ -1,11 +1,11 @@
-# Maria
+# Leanna
 Clean and modern WordPress theme for corporate websites.
 
-![maria-theme-wordpress-full](https://samuelguebo.ci/medias/uploads/2018/01/maria-theme-wordpress_showcase-2.jpg)
+![leanna-theme-wordpress-full](https://samuelguebo.ci/medias/uploads/2018/01/leanna-theme-wordpress_showcase-2.jpg)
 
 ## Description
-Maria is a clean, simple, and fully responsive WordPress theme for corporate websites.
-It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using [Zurb Foundation](https://github.com/zurb/foundation-sites), a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Maria is available in English, French, and Spanish for now.
+Leanna is a clean, simple, and fully responsive WordPress theme for corporate websites.
+It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using [Zurb Foundation](https://github.com/zurb/foundation-sites), a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Leanna is available in English, French, and Spanish for now.
 
 
 
@@ -14,7 +14,7 @@ It adjusts automatically to any screen size including tablets and smartphones as
 #### Manual
 
 1. Download theme by using "Download zip" button on the right side and unzip it.
-2. Upload the **maria** folder to the **/wp-content/themes/** directory
+2. Upload the **leanna** folder to the **/wp-content/themes/** directory
 3. Activate the Theme through the Apperance - Themes menu in WordPress
 4. See **Appearance -> Customize**  to change theme specific options.
 
@@ -24,7 +24,7 @@ It adjusts automatically to any screen size including tablets and smartphones as
 2. Go to **Appearance > Themes**
 3. Click on **Add New**
 4. Click on **Upload Theme**
-5. Choose the **maria.zip** file
+5. Choose the **leanna.zip** file
 6. Click on **Install Now**
 
 
@@ -34,9 +34,9 @@ If you already have menus and widgets on the website, you need to do this after 
 1. Go to **Appearance > Menus** and update theme locations
 2. Go to **Appearance > Widgets** and add old widgets to new sidebars
 
-If you already have uploaded images on the website, you should regenerate thumbnails. To do that you can install [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/) plugin.
+If you already have uploaded images on the website, you should regenerate thumbnails. To do that you can install [Regenerate Thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/) plugin.
 
-If you didn't use featured images you can install the [Easy Add Thumbnail](http://wordpress.org/plugins/easy-add-thumbnail/) plugin to dinamically set featured images for old published posts.
+If you didn't use featured images you can install the [Easy Add Thumbnail](https://wordpress.org/plugins/easy-add-thumbnail/) plugin to dinamically set featured images for old published posts.
 
 
 ## Customization
@@ -46,16 +46,16 @@ This theme has loads of customization options available. To open WordPress Custo
 Change the header image. It might support a random image list.
 
 #### Colors
- Maria comes with six flavors: blue, green, red, orange, yellow, and navy. You might switch between these colors using the Customizer.
+ Leanna comes with six flavors: blue, green, red, orange, yellow, and navy. You might switch between these colors using the Customizer.
 
-![maria-theme-wordpress_showcase](http://samuelguebo.ci/medias/uploads/2018/01/maria-theme-wordpress_settings.png)
+![leanna-theme-wordpress_showcase](https://samuelguebo.ci/medias/uploads/2018/01/leanna-theme-wordpress_settings.png)
 
 ## File structure
-In this theme we are using a default [WordPress template hierarchy](http://codex.wordpress.org/Template_Hierarchy).
+In this theme we are using a default [WordPress template hierarchy](https://codex.wordpress.org/Template_Hierarchy).
 
 **/css/** - Style(CSS) files.
 
-**/scss/** - [SASS](http://sass-lang.com) files for those that are comfortable with CSS preprocessors.
+**/scss/** - [SASS](https://sass-lang.com) files for those that are comfortable with CSS preprocessors.
 
 **/inc/** - Includes custom logics that are non-standard to WordPress.
 
@@ -75,7 +75,7 @@ In general words, feel free and encouraged to use, modify and redistribute this 
 You may remove any copyright references (unless required by third party components) and crediting is not necessary.
 The theme is offered free of charge. If someone asked money for it, someone just tricked you.
 
-Unless otherwise specified, all the theme files, scripts and images are licensed under [GNU General Public License version 2](http://github.com/samuelguebo/bastille/LICENSE).
+Unless otherwise specified, all the theme files, scripts and images are licensed under [GNU General Public License version 2](https://github.com/samuelguebo/bastille/LICENSE).
 
 **The exceptions to this license and other credits are below:**
 
@@ -88,7 +88,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 - Images credit goes to [Unsplash.com](https://unsplash.com/), a stunning photo stock website
 
 # Change log
-All notable changes to this theme are documented in [CHANGELOG.md](https://github.com/samuelguebo/maria/blob/master/CHANGELOG.md) file.
+All notable changes to this theme are documented in [CHANGELOG.md](https://github.com/samuelguebo/leanna/blob/master/CHANGELOG.md) file.
 
 # Contributors
- * Samuel Gu&eacute;bo ([@samuelguebo](http://twitter.com/samuelguebo))
+ * Samuel Gu&eacute;bo ([@samuelguebo](https://twitter.com/samuelguebo))

@@ -6,10 +6,10 @@ and everything up until <div id="content">
 ================================================================================================
 
 @link           https://developer.wordpress.org/themes/basics/template-files/#template-partials
-@package        Maria
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@package        Leanna
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 
@@ -19,7 +19,7 @@ and everything up until <div id="content">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php 
     if( false === get_option( 'site_icon', false ) ) {
         // Show favicon

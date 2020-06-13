@@ -1,4 +1,4 @@
-=== Bastille ===
+=== Leanna ===
 
 Contributors: automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
@@ -12,8 +12,7 @@ License URI: LICENSE
 
 == Description ==
 
-Bastille is a clean, simple, and fully responsive WordPress theme for webzines. Its name, from French origins, refer to the Storming of the Bastille on 14 July 1789, but more importantly to 14 july, birthday of the author :). 
-It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using Zurb Foundation, a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Bastille is available in English, French, and Spanish for now.
+Leanna is a clean, simple, and fully responsive WordPress theme.  It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using Zurb Foundation, a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Leanna is available in English, French, and Spanish for now.
 
 == Installation ==
 
@@ -25,7 +24,7 @@ It adjusts automatically to any screen size including tablets and smartphones as
 
 = Does this theme support any plugins? =
 
-Bastille includes support for Infinite Scroll in Jetpack.
+Leanna includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
@@ -34,8 +33,8 @@ Bastille includes support for Infinite Scroll in Jetpack.
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* Based on Underscores https://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 
 This theme is based on Underscore WordPress theme by Theme Horse.
 
@@ -47,5 +46,4 @@ and some parts under their respective licenses.
 - Zurb Foundation https://github.com/zurb/foundation-sites, for layout structure, under MIT License.
 - FontAwesome (https://github.com/FortAwesome/Font-Awesome), Fair Display (https://www.fontsquirrel.com/fonts/playfair-display), Roboto (https://fonts.google.com/specimen/Roboto), and Lora (https://www.fontsquirrel.com/fonts/lora) fonts,  under the SIL Open Font License.
 - ScrollReveal (https://github.com/jlmakes/scrollreveal), under MIT License.
-- CSS Content table and Header commenting style was borrowed from Arlene theme (https://github.com/samuelguebo/arlene).
 

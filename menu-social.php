@@ -3,16 +3,16 @@
 ================================================================================================
 The template for displaying the social menu items
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link 			https://aristath.github.io/kirki/docs/controls/repeater.html
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
 
-<?php $socials = Maria_Kirki::get_option( 'social_repeater' );
+<?php $socials = Leanna_Kirki::get_option( 'social_repeater' );
 if (is_array($socials)): //make sure the icons list is not empty ?> 
 	<ul class="right">
 		<?php foreach ($socials as $social) :?>

@@ -3,11 +3,11 @@
 ================================================================================================
 Template part for displaying 404 error message
 ================================================================================================
-@package        Maria
+@package        Leanna
 @link           https://codex.wordpress.org/The_Loop
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (http://samuelguebo.co/)
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 ?>
@@ -16,7 +16,7 @@ Template part for displaying 404 error message
     <br>
     <div class="post-item-caption">
         <div class="post-list columns">
-            <h4><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'maria' ); ?></h4>
+            <h4><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'leanna' ); ?></h4>
 
         </div>
 

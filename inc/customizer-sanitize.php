@@ -1,25 +1,25 @@
 <?php
 /*
 ================================================================================================
-Maria Customizer functions for sanitizing inputs
+Leanna Customizer functions for sanitizing inputs
 ================================================================================================
 @link           @link https://developer.wordpress.org/reference/functions/sanitize_text_field
-@package        Maria
-@copyright      Copyright (C) 2017. Samuel Guebo
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Samuel Guebo (https://samuelguebo.co/)
+@package        Leanna
+@copyright      Copyright (C) 2020. Samuel Guebo
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Samuel Guebo (https://samuelguebo.ci/)
 ================================================================================================
 */
 /* Textarea */
 
-function maria_sanitize_textarea($input) {
+function leanna_sanitize_textarea($input) {
 	global $allowedposttags;
 	$output = wp_kses( $input, $allowedposttags);
 	return $output;
 }
 /* Checkbox */
 
-function maria_sanitize_checkbox( $input ) {
+function leanna_sanitize_checkbox( $input ) {
 	if ( $input ) {
 		$output = '1';
 	} else {
@@ -29,7 +29,7 @@ function maria_sanitize_checkbox( $input ) {
 }
 /* Radio, select, option */
 
-function maria_sanitize_colors( $input, $setting ) {
+function leanna_sanitize_colors( $input, $setting ) {
 	$color = $setting->default;
 	// Ensure input is a slug.
 	$input = sanitize_key( $input );
@@ -43,7 +43,7 @@ function maria_sanitize_colors( $input, $setting ) {
 }
 
 /* Multicheck */
-function maria_sanitize_multicheck( $input, $option ) {
+function leanna_sanitize_multicheck( $input, $option ) {
 	$output = '';
 	if ( is_array( $input ) ) {
 		foreach( $option['options'] as $key => $value ) {
@@ -60,7 +60,7 @@ function maria_sanitize_multicheck( $input, $option ) {
 
 /* Uploader */
 
-function maria_sanitize_upload( $input ) {
+function leanna_sanitize_upload( $input ) {
 	$output = '';
 	$filetype = wp_check_filetype($input);
 	if ( $filetype["ext"] ) {
@@ -71,7 +71,7 @@ function maria_sanitize_upload( $input ) {
 
 /* Editor */
 
-function maria_sanitize_editor($input) {
+function leanna_sanitize_editor($input) {
 	if ( current_user_can( 'unfiltered_html' ) ) {
 		$output = $input;
 	}
@@ -84,7 +84,7 @@ function maria_sanitize_editor($input) {
 
 /* Allowed Tags */
 
-function maria_sanitize_allowedtags($input) {
+function leanna_sanitize_allowedtags($input) {
 	global $allowedtags;
 	$output = wpautop(wp_kses( $input, $allowedtags));
 	return $output;
@@ -92,7 +92,7 @@ function maria_sanitize_allowedtags($input) {
 
 /* Allowed Post Tags */
 
-function maria_sanitize_allowedposttags($input) {
+function leanna_sanitize_allowedposttags($input) {
 	global $allowedposttags;
 	$output = wpautop(wp_kses( $input, $allowedposttags));
 	return $output;
@@ -101,7 +101,7 @@ function maria_sanitize_allowedposttags($input) {
 
 /* Check that the key value sent is valid */
 
-function maria_sanitize_enum( $input, $option ) {
+function leanna_sanitize_enum( $input, $option ) {
 	$output = '';
 	if ( array_key_exists( $input, $option['options'] ) ) {
 		$output = $input;
@@ -111,7 +111,7 @@ function maria_sanitize_enum( $input, $option ) {
 
 /* Typography */
 
-function maria_sanitize_typography( $input, $option ) {
+function leanna_sanitize_typography( $input, $option ) {
 
 	$output = wp_parse_args( $input, array(
 		'size'  => '',
@@ -131,6 +131,6 @@ function maria_sanitize_typography( $input, $option ) {
 
 	$output['size']  = apply_filters( 'of_font_size', $output['size'] );
 	$output['style'] = apply_filters( 'of_font_style', $output['style'] );
-	$output['color'] = apply_filters( 'maria_sanitize_color', $output['color'] );
+	$output['color'] = apply_filters( 'leanna_sanitize_color', $output['color'] );
 	return $output;
 }
