@@ -21,13 +21,13 @@ $services = Leanna_Kirki::get_option( 'services_repeater');
 				<div class="bottom-line large-1 small-1 large-centered columns clearfix"></div>
 			</section><!--section description/-->
 			<?php if(is_array($services)): //make sure array is not empty ?>
-				<section class="columns main-column">
+				<section class="columns main-column items-wrapper">
 					<?php foreach ($services as $service): // loop through array?>
-							<div class="small-12 medium-6 large-4 columns section-item">
+							<div class="small-12 medium-12 large-4 columns section-item">
 									
 									<div class="content">
 										<h2><i class="fa <?php echo $service['service_icon'] ?>"></i></h2>
-										<h4 class="item-title"><?php echo $service['service_title'] ?></h4>
+										<h5 class="item-title"><?php echo $service['service_title'] ?></h5>
 										<p class="item-description"><?php echo $service['service_description'] ?>
 										</p>
 
