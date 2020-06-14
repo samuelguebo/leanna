@@ -26,7 +26,7 @@ $biography_background          = esc_attr(Leanna_Kirki::get_option( 'biography_b
 				<h2 class="section-title"><?php echo $biography_section_title;?></h2>
 				<p class="section-description"><?php echo $biography_section_description;?></p>
                 <div class="buttons">
-                    <a href="<?php the_permalink($biography_page);?>" class="small button round one"> <?php _e('Read biography', 'leanna')?></a>
+                    <a href="<?php echo get_the_permalink($biography_page);?>" class="small button round one"> <?php _e('Read biography', 'leanna')?></a>
                 </div>
 			</section><!--section description/-->
 	</section>

@@ -1,7 +1,7 @@
 <?php
 /*
 ================================================================================================
-Template part for displaying posts on homepage
+Template part for displaying gallery items
 ================================================================================================
 @package        Leanna
 @link           https://codex.wordpress.org/The_Loop

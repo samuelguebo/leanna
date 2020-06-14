@@ -224,6 +224,18 @@ function leanna_kirki_customize_register () {
 			)
 	);
 
+	// Field: blog page
+	Leanna_Kirki::add_field( 'leanna', array(
+		'type'        => 'dropdown-pages',
+		'settings'      => 'biography_page',
+		//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+		'description' => esc_attr__( 'Select biography page', 'leanna' ),
+		'section'       => 'biography_section',
+		'default'     => 0,
+		'sanitize_callback' => 'absint'
+		)
+	);
+
 	// Field: Background image
 	Leanna_Kirki::add_field( 'biography_background', array(
 		'type'               => 'image',
@@ -232,17 +244,6 @@ function leanna_kirki_customize_register () {
 		'section'       => 'biography_section',
 		'priority'           => 10,
 	));
-
-	// Field: blog page
-	Leanna_Kirki::add_field( 'leanna', array(
-		'type'        => 'dropdown-pages',
-		'settings'      => 'biography_page',
-		//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
-		'description' => esc_attr__( 'Select biography page', 'leanna' ),
-		'default'     => 0,
-		'sanitize_callback' => 'absint'
-		)
-	);
 
 
 	/**
@@ -302,11 +303,11 @@ function leanna_kirki_customize_register () {
 		'settings'    => 'blog_post_number',
 		'label'       => esc_attr__( 'How many posts to display on homepage?', 'leanna' ),
 		'section'     => 'blog_section',
-		'default'     => 8,
+		'default'     => 3,
 		'choices'     => array(
-			'min'  => 4,
+			'min'  => 3,
 			'max'  => 12,
-			'step' => 4,
+			'step' => 3,
 		),
 	) );
 
