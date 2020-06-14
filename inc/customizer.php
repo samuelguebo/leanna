@@ -28,7 +28,7 @@ function leanna_kirki_customize_register () {
 	// Repeater section for slider settings
 	Leanna_Kirki::add_section('slider_section', array(
 		'title' => __('Sliders', 'leanna'),
-		'priority' => 30,
+		'priority' => 10,
 	));
 
 	Leanna_Kirki::add_field( 'leanna', array(
@@ -112,7 +112,7 @@ function leanna_kirki_customize_register () {
     
 	Leanna_Kirki::add_section('services_section', array(
 		'title' => __('Services', 'leanna'),
-		'priority' => 30,
+		'priority' => 10,
 	));
 
 	// Field for services sections: title 
@@ -188,12 +188,138 @@ function leanna_kirki_customize_register () {
 		)
 	);
 
+	/**
+     * Section for Biography
+     * Taking advantage of Kirki's repeater
+     * feature, and static fields: section title
+     * and description
+     */
+	Leanna_Kirki::add_section('biography_section', array(
+		'title' => __('Biography', 'leanna'),
+		'priority' => 10,
+	));
+
+	// Field for biography sections: title
+	Leanna_Kirki::add_field( 'leanna', array(
+			'type'          => 'text',
+			'settings'      => 'biography_section_title',
+			'label'         => __( 'Head text for biography section', 'leanna' ),
+			//'description'   => __( 'Add Head text for blog section', 'leanna' ),
+			'default'       => __( 'Biography', 'leanna' ),
+			'section'       => 'biography_section',
+			'priority'      => 10,
+			'sanitize_callback' => 'sanitize_text_field'
+			)
+	);
+	// Field for biography sections: description
+	Leanna_Kirki::add_field( 'leanna', array(
+			'type'          => 'textarea',
+			'settings'      => 'biography_section_description',
+			'label'         => __( 'Head description for biography section', 'leanna' ),
+			//'description'   => __( 'Add Head description for blog section', 'leanna' ),
+			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'leanna' ),
+			'section'       => 'biography_section',
+			'priority'      => 10,
+			'sanitize_callback' => 'sanitize_text_field'
+			)
+	);
+
+	// Field: Background image
+	Leanna_Kirki::add_field( 'biography_background', array(
+		'type'               => 'image',
+		'settings'           => 'biography_background',
+    'label'              => esc_attr__('Background image for biography section', 'leanna'),
+		'section'       => 'biography_section',
+		'priority'           => 10,
+	));
+
+	// Field: blog page
+	Leanna_Kirki::add_field( 'leanna', array(
+		'type'        => 'dropdown-pages',
+		'settings'      => 'biography_page',
+		//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+		'description' => esc_attr__( 'Select biography page', 'leanna' ),
+		'default'     => 0,
+		'sanitize_callback' => 'absint'
+		)
+	);
+
+
+	/**
+     * Section for Blog
+     * Taking advantage of Kirki's repeater 
+     * feature, and static fields: section title
+     * and description
+     */
+    
+	// Create a repeater section for blog
+	Leanna_Kirki::add_section('blog_section', array(
+		'title' => __('Blog', 'leanna'),
+		'priority' => 10,
+	));
+
+
+	// Field for blog sections: title 
+	Leanna_Kirki::add_field( 'leanna', array(
+			'type'          => 'text',
+			'settings'      => 'blog_section_title',
+			'label'         => __( 'Head text for blog section', 'leanna' ),
+			//'description'   => __( 'Add Head text for blog section', 'leanna' ),
+			'default'       => __( 'Our blog', 'leanna' ),
+			'section'       => 'blog_section',
+			'priority'      => 10,
+			'sanitize_callback' => 'sanitize_text_field'
+			)
+	);
+	// Field for blog sections: description
+	Leanna_Kirki::add_field( 'leanna', array(
+			'type'          => 'textarea',
+			'settings'      => 'blog_section_description',
+			'label'         => __( 'Head description for blog section', 'leanna' ),
+			//'description'   => __( 'Add Head description for blog section', 'leanna' ),
+			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'leanna' ),
+			'section'       => 'blog_section',
+			'priority'      => 10,
+			'sanitize_callback' => 'sanitize_text_field'
+			)
+	);
+
+
+	// Field: blog page
+	Leanna_Kirki::add_field( 'leanna', array(
+			'type'        => 'dropdown-pages',
+			'settings'      => 'blog_page',
+			//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
+			'description' => esc_attr__( 'Select blog page', 'leanna' ),
+			'default'     => 0,
+			'sanitize_callback' => 'absint'
+			)
+		);
 	
+	// Field: blog post number
+	Leanna_Kirki::add_field( 'leanna', array(
+		'type'        => 'number',
+		'settings'    => 'blog_post_number',
+		'label'       => esc_attr__( 'How many posts to display on homepage?', 'leanna' ),
+		'section'     => 'blog_section',
+		'default'     => 8,
+		'choices'     => array(
+			'min'  => 4,
+			'max'  => 12,
+			'step' => 4,
+		),
+	) );
+
+	/**
+     * Section for Social medias
+     * Taking advantage of Kirki's repeater 
+     * feature, and static fields
+     */
 	
 	// Create a repeater section for social networks
 	Leanna_Kirki::add_section('social_section', array(
 		'title' => __('Social medias', 'leanna'),
-		'priority' => 30,
+		'priority' => 10,
 	));
 	// Create a repeater for socials
 	Leanna_Kirki::add_field( 'leanna', array(
@@ -229,69 +355,6 @@ function leanna_kirki_customize_register () {
 		)
 	);
 
-	/**
-     * Section for Blog
-     * Taking advantage of Kirki's repeater 
-     * feature, and static fields: section title
-     * and description
-     */
-    
-	// Create a repeater section for blog
-	Leanna_Kirki::add_section('blog_section', array(
-		'title' => __('Blog', 'leanna'),
-		'priority' => 30,
-	));
-
-
-	// Field for blog sections: title 
-	Leanna_Kirki::add_field( 'leanna', array(
-			'type'          => 'text',
-			'settings'      => 'blog_section_title',
-			'label'         => __( 'Head text for blog section', 'leanna' ),
-			//'description'   => __( 'Add Head text for blog section', 'leanna' ),
-			'default'       => __( 'Our blog', 'leanna' ),
-			'section'       => 'blog_section',
-			'priority'      => 10,
-			'sanitize_callback' => 'sanitize_text_field'
-			)
-	);
-	// Field for blog sections: description
-	Leanna_Kirki::add_field( 'leanna', array(
-			'type'          => 'textarea',
-			'settings'      => 'blog_section_description',
-			'label'         => __( 'Head description for blog section', 'leanna' ),
-			//'description'   => __( 'Add Head description for blog section', 'leanna' ),
-			'default'         => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'leanna' ),
-			'section'       => 'blog_section',
-			'priority'      => 10,
-			'sanitize_callback' => 'sanitize_text_field'
-			)
-	);
-
-
-	// Field: blog page
-	Leanna_Kirki::add_field( 'leanna', array(
-			'type'        => 'dropdown-pages',
-			//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
-			'description' => esc_attr__( 'Select blog page', 'leanna' ),
-			'default'     => 0,
-			'sanitize_callback' => 'absint'
-			)
-		);
-	
-	// Field: blog post number
-	Leanna_Kirki::add_field( 'leanna', array(
-		'type'        => 'number',
-		'settings'    => 'blog_post_number',
-		'label'       => esc_attr__( 'How many posts to display on homepage?', 'leanna' ),
-		'section'     => 'blog_section',
-		'default'     => 8,
-		'choices'     => array(
-			'min'  => 4,
-			'max'  => 12,
-			'step' => 4,
-		),
-	) );
 }
 function leanna_customize_register( $wp_customize ) {
 	

@@ -362,8 +362,10 @@ if(!function_exists('leanna_custom_breadcrumbs')) {
 	 *
 	 */
 	function leanna_get_attachment_id_from_src( $image_src ) {
+		$meta_value = str_replace(wp_get_upload_dir()['baseurl'] .'/', '', $image_src);
+
 		global $wpdb;
-		$query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$image_src'";
+		$query = "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_value='$meta_value'";
 		$id = $wpdb->get_var($query);
 		return $id;
 	}

@@ -1,7 +1,7 @@
 <?php
 /*
 ================================================================================================
-Template part for displaying blog sections
+Template part for displaying gallery blocs section
 ================================================================================================
 @package        Leanna
 @link           https://codex.wordpress.org/The_Loop

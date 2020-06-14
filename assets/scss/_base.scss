@@ -198,15 +198,18 @@ header .banner-top .widget-title{
 
 }
 .top-bar.expanded {
-	overflow: visible;
-	min-height: 100%;
+	overflow: hidden;
+	ul {
+		background: $light-color;
+	}
+
 }
 .top-bar-section li:not(.has-form) a:not(.button) {
 	font-size: 0.80em;
 	font-weight: 300;
 }
 .top-bar-section ul li:hover:not(.has-form) > a {
-	background-color: $primary-color;
+	background-color: $secondary-color;
 }
 .top-bar-section li:not(.has-form) a:not(.button) {
 	line-height: 2.8125rem;
@@ -229,6 +232,7 @@ header .banner-top .widget-title{
 	font-size: 0.7em;
 
 }
+
 .main-nav {
 		 float: right !important;
 	 }
@@ -239,7 +243,7 @@ header .banner-top .widget-title{
 }
 
 .top-bar-section ul li > a {
-	color:$menu-link-color;
+	color:$secondary-color;
 }
 .top-bar-section li a:hover{
 	color: $dark-color;
@@ -852,6 +856,7 @@ article .post-item-date {
 	text-align: left;
 }
 
+
 /*
 ================================================================================================
 9.1 - Content (grey section)
@@ -905,7 +910,8 @@ section.main-row.grey-section p.expertise-description{
 	display:inline-block;
 	font-weight:300;
 	font-family: 'Arial', 'serif';
-}/*
+}
+/*
 ================================================================================================
 9.2 - Content (white section)
 ================================================================================================
@@ -1059,6 +1065,46 @@ section.white-section .section-item{
 	}
 }
 
+section.newsletter-wrapper{
+	margin-top: 20px;
+	margin-bottom: 20;
+
+	.newsletter{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background: darken($secondary-color, 10);
+
+		.section-title, .section-description {
+			color: $light-color;
+			opacity: .9;
+		}
+		.section-title {
+			&:before{
+				border-color: $light-color;
+				left: 45%;
+			}
+			&:after{
+				border-color: $third-color;
+				left: 49%;
+			}
+		}
+		
+		.button{
+			padding: 0.65rem 1rem;
+			font-size: 0.8125rem;
+			background: transparent;
+			border: solid 1px $primary-color;
+			color: $primary-color;
+			font-weight: 300px;
+		}
+		.button:hover{
+			background: $primary-color;
+			color: $light-color;
+			border: none;
+		}
+	}
+
+}
 
 
 .category-row article .post-item-image, .main-row article .post-item-image{
