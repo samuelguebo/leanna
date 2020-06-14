@@ -156,10 +156,10 @@ function leanna_kirki_customize_register () {
 			),
 			'fields' => array(
 				// field: image
-				'service_image' => array(
-						'type'        => 'image',
+				'service_icon' => array(
+						'type'        => 'text',
 						//'label'       => esc_attr__( 'Display text for section', 'leanna' ),
-						'description' => esc_attr__( 'Image of the slide', 'leanna' ),
+						'description' => esc_attr__( 'Fontawesome icon of the slide', 'leanna' ),
 				),
 				'service_title'	=> array(
 					'type'              => 'text',

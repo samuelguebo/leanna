@@ -482,7 +482,7 @@ meta.foundation-mq-topbar {
 }
 @media only screen and (max-width: 65em) {
 	.top-bar-section li:not(.has-form) a:not(.button) {
-	font-size: 0.9em;
+	font-size: 1em;
 	}
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		line-height: 2rem;
@@ -537,7 +537,7 @@ meta.foundation-mq-topbar {
 		overflow: hidden;    
 		opacity: .7;
 		margin-top: -15%;
-		filter: brightness(30);
+
 	}
 
 	/* Lines */
@@ -816,7 +816,7 @@ article .post-item-date {
 .single-row .post-item-author p,
 .single-row .post-item-author {
 	color: white;
-	font-size: 0.9em;
+	font-size: 1em;
 }
 
 .single-row .post-item-author img {
@@ -842,11 +842,6 @@ article .post-item-date {
 .single-row .widget .button:hover {
 	background-color: #000;
 	color: #FFFFFF;
-}
-
-.single-row article.post-item .bottom-line {
-	border-bottom: 10px solid $link-color;
-	margin-bottom: 10px;
 }
 
 .single-row article.post-item .post-item-title {
@@ -926,19 +921,41 @@ section.main-row.white-section .white-section-intro {
 	margin-bottom: 20px;
 }
 
-section.white-section .section-title, section.white-section .item-title {
-	font-family: $primary-font;
+
+.single-row article.post-item .bottom-line {
+	border-bottom: 10px solid $link-color;
+	margin-bottom: 10px;
 }
-
-
-section.white-section .bottom-line {
-	border-bottom: solid 1px lighten($normal-gray-color, 60);
-}
-
-section.white-section .section-title{
-	color: $dark-color;
+section.white-section .section-title {
+	font-family: $secondary-font;
+	color: $secondary-color;
 	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
+
+	&:before, &:after{
+	content: "";
+	height: 1px;
+	display: inline-block;
+	margin: 0 auto;
+	position: absolute;
+	bottom: -10px;
+
+	}
+	&:before{
+		border-bottom: solid 3px $secondary-color;
+		width: 20px;
+		left: 45%;
+	}
+	&:after{
+		width: 50px;
+		border-bottom: solid 3px $third-color;
+		left: 50%;
+	}
+
 }
+	
+
 section.white-section .item-title{
 	color: $primary-color;
 }
@@ -954,11 +971,11 @@ section.main-row.white-section .section-item{
 .main-row.white-section .item-description, .main-row.white-section .section-description {
 	color: lighten($normal-gray-color, 20);
 	line-height: 1.5;
-	font-size: .95em;
+	font-size: 1.2em;
 
 }
 section.main-row.white-section .section-description{
-	
+	margin-top: 20px;	
 	display: inline-block;
 	font-weight: normal;
 }
@@ -1449,12 +1466,12 @@ aside .recent-posts-box ul li:last-child {
 	padding-right: 10px;
 }
 .widget ul li a {
-	font-size: 0.9em;
+	font-size: 1em;
 	color: $dark-color;
 }
 footer .widget ul li a {
-	font-size: 0.9em;
-	color: lighten($normal-gray-color, 40);
+	font-size: 1em;
+	color: $light-color;
 }
 aside .recent-posts-box ul li a {
 	font-size: 0.8em;
@@ -1484,7 +1501,7 @@ footer#footer {
 
 footer .copyright {
 	clear: both;
-	font-size: 0.75em;
+	font-size: 0.9em;
 	font-family: $primary-font;
 }
 
@@ -1530,13 +1547,13 @@ footer#footer .widget .button.small{
 	
 }
 footer#footer .footer-bar .widget-title {
-	color: $normal-gray-color;
+	color: $primary-color;
 }
 
 footer#footer .footer-bar {
 	margin-top: 0px;
 	padding-top: 40px;
-	background: url(../img/worldmap.png) lighten($normal-gray-color, 70);
+	background: url(../img/worldmap.png) $secondary-color;
 	background-repeat: no-repeat;
 	background-position: center 50%;
 	background-size: 80%;
@@ -1776,7 +1793,7 @@ footer .breadcrumbs > *::before {
 }
 .single-row .post-item .breadcrumbs {
 	font-weight: bold;
-	font-size: 0.9em;
+	font-size: 1em;
 	padding: 0;
 }
 

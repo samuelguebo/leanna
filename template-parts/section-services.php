@@ -15,7 +15,7 @@ $service_section_description = Leanna_Kirki::get_option( 'services_section_descr
 $services = Leanna_Kirki::get_option( 'services_repeater');
 ?>
 <section class="row main-row clearfix white-section">
-			<section class="columns main-column white-section-intro large-8 small-12 large-centered columns clearfix">
+			<section class="columns main-column white-section large-7 small-12 large-centered columns clearfix">
 				<h2 class="section-title"><?php echo $service_section_title; ?></h2>
 				<p class="section-description"><?php echo $service_section_description; ?></p>
 				<div class="bottom-line large-1 small-1 large-centered columns clearfix"></div>
@@ -24,18 +24,9 @@ $services = Leanna_Kirki::get_option( 'services_repeater');
 				<section class="columns main-column">
 					<?php foreach ($services as $service): // loop through array?>
 							<div class="small-12 medium-6 large-4 columns section-item">
-								<?php
-								$service_image_id = leanna_get_attachment_id_from_src( $service['service_image'] );
-								$service_thumb = leanna_get_thumb_by_id ($service_image_id, 'post_thumb');
-	
-								?>
-									<div class="post-item-caption">
-										<div class="post-item-image"> 
-											<img src="<?php echo leanna_get_thumb_by_id($service['service_image'],'post-thumb');?>" alt="<?php echo $service['service_title'];?>" class="responsive delay"/>
-
-										</div>
-									</div>
+									
 									<div class="content">
+										<h2><i class="fa <?php echo $service['service_icon'] ?>"></i></h2>
 										<h4 class="item-title"><?php echo $service['service_title'] ?></h4>
 										<p class="item-description"><?php echo $service['service_description'] ?>
 										</p>
