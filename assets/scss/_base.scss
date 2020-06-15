@@ -1161,10 +1161,11 @@ section.home-blog {
 				/*height: 100%;*/
 				overflow: hidden;
 				img {
-					min-height: 150px;
+					min-height: 100%;
 					width: auto;
 					min-width: unset;
 					max-width: unset;
+					height: unset;
 					border-top-left-radius: 20px;
 					border-bottom-right-radius: 0;
 					border-bottom-left-radius: 20px;
