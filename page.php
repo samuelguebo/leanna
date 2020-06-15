@@ -14,7 +14,7 @@ and that other 'pages' on your WordPress site may use a different template.
 
 get_header(); ?>
     <section class="single-cover" 
-     style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">
+     style="background-image:url(<?php echo esc_url(get_header_image());?>);">
         <div class="overlay">
             <h3 class="center title columns large-10 large-centered">
             <?php the_title();?>

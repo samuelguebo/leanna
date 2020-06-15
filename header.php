@@ -31,7 +31,7 @@ and everything up until <div id="content">
 
 <body <?php body_class(); ?>>
     <header>
-        <div class="nav-wrapper large-8 medium-10 small-4 columns">
+        <div class="nav-wrapper large-6 medium-6 small-12 columns">
             <?php get_template_part('menu'); ?>
         </div><!--/nav-wrapper-->     
         <?php if(is_front_page()){

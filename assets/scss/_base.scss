@@ -4,7 +4,7 @@ $primary-font: 'Belleza', 'sans-serif';
 $secondary-font: 'Poppins','Georgia', sans-serif;
 $shadow-color: #c9c9c9;
 $border-color: #ededed;
-$gray-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+$gray-shadow: 0px 0px 3px rgba(0,0,0,.2);
 $dark-gray-color: #1b1a1a;
 $normal-gray-color: #3C3C3B;
 
@@ -106,19 +106,10 @@ body {
 ================================================================================================
 */
 body.home header {
-	position:relative;
-
-	.nav-wrapper, .socials {
-		position: absolute;
-	}
 
 	.socials {
 		bottom: 15%;
 		left: 45%;
-	}
-	.nav-wrapper{
-		right: 10%;
-		top: 20px;
 	}
 
 }
@@ -131,6 +122,14 @@ header {
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-size: cover;
+
+	.nav-wrapper{
+		right: 10%;
+		top: 20px;
+	}
+	.nav-wrapper, .socials {
+		position: absolute;
+	}
 }
 
 header div.slogan a {
@@ -141,12 +140,22 @@ header div.slogan a:hover {
 	color: $dark-color;
 }
 
+.single-cover {
+	position: relative;
+	min-height: 150px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position:center center; 
+	background-size: cover;
+}
+
 .single-cover .overlay{
 	background: rgba($primary-color,0.85);
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
+	position: absolute;
 }
 .single-cover .title.center{
 		text-align: center;
@@ -157,6 +166,7 @@ header div.slogan a:hover {
 		font-weight: 300;
 		text-transform: uppercase;
 		color: $light-color;
+		;
 	
 	}
 header .site-title {
@@ -1006,6 +1016,8 @@ section.main-row.white-section .post-item-caption{
 }
 section.white-section .section-item{
 	text-align:center;
+	position: relative;
+
 	&:nth-child(odd):after, &:nth-child(even):after{
 		content: "";
 		height: 1px;
@@ -1165,6 +1177,7 @@ section.home-blog {
 		
 		&.big .post-item-caption {
 			/*height: 400px;*/
+			overflow: hidden;
 			.post-item-image{
 				/*height: 235px;*/
 			}
@@ -1179,6 +1192,10 @@ section.home-blog {
 				min-width: 100%;
 				height: auto;
 			}
+		}
+
+		&:hover > .post-item-caption img{
+			filter:sepia(20)
 		}
 	}
 }
@@ -1510,8 +1527,12 @@ article.columns + article.columns:last-child {
 aside .widget {
 	max-width: 100%;
 	margin-bottom: 15px;
-	-webkit-box-shadow: $gray-shadow;
-	box-shadow: $gray-shadow;
+
+	ul {
+		-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+		box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+		
+	}
 }
 aside .widget ul, .widget ol, .widget > div{
 	padding:15px 10px;
@@ -1526,8 +1547,13 @@ aside .widget-title {
 	font-family: $primary-font;
 	text-transform: uppercase;
 	display: block;
-	margin-bottom: 15px;
-	background: $secondary-color;
+	background: $secondary-color, 30;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+
 }
 
 aside .widget_search .widget-title {
@@ -1550,11 +1576,7 @@ aside .widget .button.small {
 	padding: 0.6rem 0.5rem 0.7rem 0.5rem;
 	font-size: 0.8125rem;
 }
-aside .widget-title {
-	padding: 5px 10px 0px 15px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
+
 
 aside .widget-title .fa {
 	font-size: 0.85em;
@@ -1711,6 +1733,7 @@ footer#footer .footer-bar {
 	margin-top: 0px;
 	padding-top: 40px;
 	background: url(../img/worldmap.png) $secondary-color;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center 50%;
 	background-size: 80%;
@@ -1877,12 +1900,14 @@ table thead tr th {
 .page-numbers, .nav-links div {
 	font-family: $primary-font;
 	display: inline-block;
-	padding: 5px 10px;
+	padding: 7px;
 	margin: 0 2px 0 0;
 	border: 1px solid $link-color;
-	line-height: 1;
+	text-align: center;
 	text-decoration: none;
-	border-radius: 2px;
+	border-radius: 20px;
+	height: 40px;
+	width: 40px;
 	font-weight: 600;
 	font-size: 1em;
 }

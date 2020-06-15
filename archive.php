@@ -14,7 +14,7 @@ The archive template file
 
 get_header(); ?>
             <section class="single-cover" 
-             style="background-image:url(<?php echo esc_url(get_header_image());?>); background-position:center center;">
+             style="background-image:url(<?php echo esc_url(get_header_image());?>);">
                 <div class="overlay">
                     <h3 class="center title">
                         <?php echo the_archive_title();?>

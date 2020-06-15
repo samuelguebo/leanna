@@ -24,7 +24,7 @@ $link-color: $primary-color;
 }
 
 aside .widget-title {
-    background: $primary-color;
+    background: darken($primary-color, 2);
 }
 .main-column .call-to-action .button.small {
     background:$primary-color;
