@@ -47,7 +47,7 @@ function leanna_setup() {
 	add_theme_support( 'post-thumbnails' );
     add_image_size( 'post-thumb', 370, 210, array( 'center', 'top' ) );
     add_image_size( 'post-thumb-small', 200, 150, array( 'center', 'top' ) );
-    add_image_size( 'post-thumb-big', 510, 210, array( 'center', 'top' ) );
+    add_image_size( 'post-thumb-big', 510, 260, array( 'center', 'top' ) );
     add_image_size( 'single-thumb', 770, 330, array( 'center', 'top' ) );
     add_image_size( 'slider-cover', 1100, 400, array( 'center', 'top' ) );
 

@@ -18,10 +18,10 @@ $biography_background          = esc_attr(Leanna_Kirki::get_option( 'biography_b
 //$biography_background          = wp_get_attachment_image_src(leanna_get_attachment_id_from_src($biography_background), 'slider-cover')[0];
 ?>
 
-<section style="position: relative;" class="newsletter-wrapper">
+<section style="position: relative;" class="biography-wrapper">
 	<section style="background:url(<?php echo esc_url($biography_background);?>); background-position: top center; background-size: cover; opacity: .1; height: 100%; position: absolute; width: 100%; background-attachment: fixed">
 	</section>
-	<section class="boxed-wrapper impact newsletter main-row white-section">
+	<section class="clearfix biography main-row white-section">
 			<section class="columns large-10 small-12 large-centered columns clearfix">
 				<h2 class="section-title"><?php echo $biography_section_title;?></h2>
 				<p class="section-description"><?php echo $biography_section_description;?></p>

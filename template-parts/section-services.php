@@ -23,7 +23,7 @@ $services = Leanna_Kirki::get_option( 'services_repeater');
 			<?php if(is_array($services)): //make sure array is not empty ?>
 				<section class="columns main-column items-wrapper">
 					<?php foreach ($services as $service): // loop through array?>
-							<div class="small-12 medium-12 large-4 columns section-item">
+							<div class="small-12 medium-4 large-4 section-item">
 									
 									<div class="content">
 										<h2><i class="fa <?php echo $service['service_icon'] ?>"></i></h2>

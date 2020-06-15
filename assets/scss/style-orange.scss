@@ -35,3 +35,8 @@ aside .widget-title {
 .button:hover {
     background:$dark-color;
 }
+
+/* Blog */
+section.home-blog {
+	background: lighten($secondary-color, 65);
+}

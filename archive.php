@@ -21,7 +21,7 @@ get_header(); ?>
                     </h3>
                 </div>
             </section>
-            <section id="breadcrumbs" >
+            <section id="breadcrumbs" class="row">
                 <div class="breadcrumbs">
                     <?php if (function_exists('leanna_custom_breadcrumbs')) leanna_custom_breadcrumbs(); ?>
                 </div>

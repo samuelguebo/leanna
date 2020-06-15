@@ -335,14 +335,11 @@ header .banner-top .widget-title{
 .socials ul li a {
 	color: $light-color;
 	font-size: 20px;
-	width: 36px;
-	height: 36px;
-	
-	-moz-border-radius: 18px;
-	-webkit-border-radius: 18px;
-	border-radius: 18px;
 	border: solid 1px $light-color;
 	display: block;
+	height: 40px;
+	width: 40px;
+	border-radius: 40px;
 }
 
 footer .socials ul li a:hover {
@@ -1065,11 +1062,10 @@ section.white-section .section-item{
 	}
 }
 
-section.newsletter-wrapper{
+section.biography-wrapper{
 	margin-top: 20px;
-	margin-bottom: 20;
 
-	.newsletter{
+	.biography{
 		padding-top: 30px;
 		padding-bottom: 30px;
 		background: darken($secondary-color, 10);
@@ -1109,7 +1105,7 @@ section.newsletter-wrapper{
 /* Blog */
 section.home-blog {
 	position: relative;
-	background: lighten($primary-color, 27);
+	background: lighten($secondary-color, 50);
 	
 	.white-section {
 		background: transparent;
@@ -1131,14 +1127,57 @@ section.home-blog {
 			border-top-left-radius: 20px;
 			border-top-right-radius: 20px;
 		}
+
 		&.small .post-item-caption {
 			display: flex;
-			flex-direction: row;
-			overflow: hidden;
-			
+			flex-direction: row; 
+			/*height: 180px;*/
+			margin-bottom: 25px;
+			.post-item-image{
+				width: 100%;
+				/*height: 100%;*/
+				overflow: hidden;
+				img {
+					min-height: 100%;
+					width: auto;
+					max-width: unset;
+					border-top-left-radius: 20px;
+					border-bottom-right-radius: 0;
+					border-bottom-left-radius: 20px;
+					border-top-right-radius: 0;
+				}
+			}
+			.panel {
+				h3 {
+					font-size: 1.5rem;
+				}
+				h6 {
+					font-size: 1.2rem;
+				}
+				border-top-left-radius: 0px;
+				border-bottom-right-radius: 20px;
+				border-bottom-left-radius: 0px;
+				border-top-right-radius: 20px;
+				margin-bottom: 0;
+				height: 100%;
+			}
+		}
+		
+		&.big .post-item-caption {
+			/*height: 400px;*/
+			.post-item-image{
+				/*height: 235px;*/
+			}
+			.panel{
+				/*height: 150px;*/
+				overflow: hidden;
+				h3{
+					font-size: 1.3rem;
+				}
+			}
 			img{
-				min-height: 100%;
-				width: auto;
+				min-width: 100%;
+				height: auto;
 			}
 		}
 	}
@@ -1147,6 +1186,12 @@ section.home-blog {
 	overflow: hidden;
 	background: $dark-color;
 	position:relative;
+
+	img {
+		min-width: 100%;
+		width: 100%;
+		height: auto;
+	}
 }
 
 .full-blog article .post-item-caption {
@@ -1570,9 +1615,12 @@ aside .recent-posts-box ul li:last-child {
 }
 .widget ul li a:before {
 	font-family: $icon-font;
-	content: '\f054';
+	content: '\f1db'; 
 	color: $link-color;
 	padding-right: 10px;
+	font-size: .6em;
+	position: relative;
+	top: -3px;
 }
 .widget ul li a {
 	font-size: 1em;
@@ -1928,6 +1976,18 @@ footer .breadcrumbs > *::before {
 */
 
 @media only screen and (max-width: 64em) { 
+
+	section.items-wrapper {
+		.section-item {
+			margin-bottom: 20px;
+		}
+	}
+	section.white-section .section-item{
+		text-align:center;
+		position: relative;
+
+		
+	}
 	.category-row .mix-small {display: none;}
 	
 	header .banner-top, header .clear-banner, .search-wrapper {display: none;}
@@ -1986,16 +2046,74 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 37.50em) {
+
+	/* Blog */
+	section.home-blog {
+		
+		article{
+			&.big .post-item-caption {
+				/*height: 300px;*/
+				.post-item-image{
+					height: unset;
+				}
+
+				.panel{
+					/*height: 150px; */
+					overflow: hidden;
+					h3{
+						font-size: 1rem;
+					}
+				}
+			}
+
+			&.small .post-item-caption {
+				h6{
+					font-size: .9rem;
+				}
+			}
+		}
+	}
+
+	.top-bar .toggle-topbar.menu-icon a span::after {
+		margin-right: 10px;
+	} 
+	body.home header .nav-wrapper {
+		right: 0%;
+	}
+	
+	section.items-wrapper {
+		flex-direction: column;
+	}
+	body.home header .socials {
+		bottom: 20%;
+		left: 29%;
+		a {
+			font-size: 1em;
+
+		}
+	}
+	section.white-section .section-item{
+		
+
+		&:nth-child(even):after{
+			border-top: none;
+			bottom: 0px !important;
+			border-bottom: solid 1px $primary-color;
+			top: unset;
+		}
+	}
+
 	.slider-wrapper a.button{
 		margin-top: 5px;
 		border-radius:5px;
 		font-size:0.5em;
 		padding: 10px 30px;
 	}
-
+	
 	.slider-wrapper .post-item img{ 
-		min-height: 230px;
+		/*min-height: 230px; 
 		height: 100%;
+		*/
 	}
 	.slider-wrapper{
 		max-height: 230px !important;

@@ -36,11 +36,11 @@ $blog_post_number = esc_attr(Leanna_Kirki::get_option( 'blog_post_number'));
                 $blog_posts = new WP_Query($args);
                 while ( $blog_posts->have_posts() ) : $blog_posts->the_post();
 						if($i == 1){
-						echo '<section class="columns large-6 small-12">';
-							leanna_get_template_part('template-parts/content-article-home-small.php', 'large-12', 'post-thumb-small');
+						echo '<section class="large-6 small-12 columns ">';
+							leanna_get_template_part('template-parts/content-article-home-small.php', 'large-12 medium-6 small-12 columns', 'post-thumb-small');
 				
 						}else if ($i == 2){
-							leanna_get_template_part('template-parts/content-article-home-small.php', 'large-12', 'post-thumb-small');
+							leanna_get_template_part('template-parts/content-article-home-small.php', 'large-12 medium-6 small-12 columns', 'post-thumb-small');
 							echo '</section>'; 
 						}else if($i == 3) {
 							echo '<section class="columns large-6 small-12">';
