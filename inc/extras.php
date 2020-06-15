@@ -389,7 +389,7 @@ if(!function_exists('leanna_custom_breadcrumbs')) {
 			leanna_get_first_image($post_id);
 			$first_img = leanna_get_first_image($post_id);
 			if ( !empty( $first_img ) ){
-				$html = '<img src="' . $first_img . '" alt="' . $alt . '" class="' . $attr['class'] . '" />';
+				$html = '<img src="' . $first_img . '" class="' . $attr['class'] . '" />';
 			}
 		}
 		return $html;
