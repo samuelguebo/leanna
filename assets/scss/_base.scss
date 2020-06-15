@@ -1161,9 +1161,8 @@ section.home-blog {
 				/*height: 100%;*/
 				overflow: hidden;
 				img {
-					min-height: 100%;
-					width: initial;
-					height: unset;
+					min-height: 150px;
+					width: auto;
 					min-width: unset;
 					max-width: unset;
 					border-top-left-radius: 20px;
@@ -1209,7 +1208,7 @@ section.home-blog {
 		}
 
 		&:hover > .post-item-caption img{
-			//filter:sepia(20)
+			filter:sepia(20)
 		}
 	}
 }
