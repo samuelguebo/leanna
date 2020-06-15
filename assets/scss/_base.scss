@@ -1800,6 +1800,10 @@ footer#footer a#back-to-top {
 	.wpml-ls-flag {
 		margin-right: 10px;
 	}
+
+	& > .wpml-ls-legacy-list-vertical {
+		display: block;
+	}
 }
 
 
