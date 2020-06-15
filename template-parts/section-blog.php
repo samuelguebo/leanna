@@ -18,8 +18,8 @@ $blog_post_number = esc_attr(Leanna_Kirki::get_option( 'blog_post_number'));
 <section class="home-blog clearfix white-section">
 	<section class="row main-row clearfix white-section">
 				<section class="columns main-column large-8 small-12 large-centered columns clearfix">
-					<h2 class="section-title"><?php echo $blog_section_title; ?></h2>
-					<p class="section-description"><?php echo $blog_section_description; ?></p>
+					<h2 class="section-title"><?php _e($blog_section_title, 'leanna'); ?></h2>
+					<p class="section-description"><?php _e($blog_section_description, 'leanna'); ?></p>
 					<div class="bottom-line large-1 small-1 large-centered columns clearfix"></div>
 				</section><!--section description/-->
 	</section>

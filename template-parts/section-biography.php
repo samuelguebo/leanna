@@ -23,8 +23,8 @@ $biography_background          = esc_attr(Leanna_Kirki::get_option( 'biography_b
 	</section>
 	<section class="clearfix biography main-row white-section">
 			<section class="columns large-10 small-12 large-centered columns clearfix">
-				<h2 class="section-title"><?php echo $biography_section_title;?></h2>
-				<p class="section-description"><?php echo $biography_section_description;?></p>
+				<h2 class="section-title"><?php _e($biography_section_title, 'leanna');?></h2>
+				<p class="section-description"><?php _e($biography_section_description, 'leanna');?></p>
                 <div class="buttons">
                     <a href="<?php echo get_the_permalink($biography_page);?>" class="small button round one"> <?php _e('Read biography', 'leanna')?></a>
                 </div>
