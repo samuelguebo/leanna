@@ -44,16 +44,17 @@ $sliders = null;?>
 
 			// Handle typewriter
 			let typedWrapper = $('header span.type-machine')[0];
-			let strings = typedWrapper.innerHTML.split(',')
-			typedWrapper.innerHTML = strings[0]
+			let stringsWrapper = $('header span.strings')[0];
+			let strings = stringsWrapper.innerHTML.split(',')
+			stringsWrapper.innerHTML = strings[0]
 			strings[0] = " ^3000 " + strings[0]
-			console.log(strings)
+			// console.log(strings)
 			
 			/* Typed animation text */
 			let options = {
 				strings: strings
 				, loop: true
-				, backDelay: 3*1000
+				, backDelay: 2.5*1000
 				, typeSpeed: 80
 				, backSpeed: 50
 			}

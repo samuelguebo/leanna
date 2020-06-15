@@ -11,15 +11,20 @@ Template part for displaying a slide item in the Slider loop
 ================================================================================================
 */
 
-
+$title = '';
+$strings = explode(",", $post['slide_title']);
+if(count($strings) > 0){
+    $title = $strings[0];
+}
 ?>
 <section class="post-item">
         <div class="img-wrapper">
             <img src="<?php echo leanna_get_thumb_by_id($post['slide_image'],'full');?>" alt="<?php echo $post['slide_title'];?>" class="responsive delay"/>
         </div>
         <div class="slider-caption post-item-caption">
-            <div class="panel large-8 columns large-centered">
-                <h1 class="post-item-title"><?php echo $post['slide_description'];?> <span class="type-machine"><?php echo $post['slide_title'];?></span></h1>
+            <div class="panel large-8 medium-7 small-8 columns">
+                <h1 class="post-item-title"><?php echo $post['slide_description'];?> <span class="type-machine"><?php echo $title;?></span></h1>
+                <span class="strings"><?php echo $post['slide_title'];?></span>
             </div>
         </div>
     <div class="clearfix"></div>

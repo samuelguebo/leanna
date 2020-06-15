@@ -14,7 +14,7 @@ The template for displaying the social menu items
 
 <?php $socials = Leanna_Kirki::get_option( 'social_repeater' );
 if (is_array($socials)): //make sure the icons list is not empty ?> 
-	<ul class="right">
+	<ul class="right social-icons">
 		<?php foreach ($socials as $social) :?>
 			<li class="reveal">
 				<a href="<?php echo $social['social_url']; ?>" alt="<?php echo $social['social_title']; ?>"></a>

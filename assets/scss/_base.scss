@@ -109,7 +109,10 @@ body.home header {
 
 	.socials {
 		bottom: 15%;
-		left: 45%;
+		/*left: 45%;*/
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 
 }
@@ -511,6 +514,7 @@ meta.foundation-mq-topbar {
 }
 .top-bar-section .dropdown li.title.back a{
 	color: $link-color;
+	width: 0px;
 }
 .top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
 	color: $primary-color;
@@ -562,11 +566,15 @@ meta.foundation-mq-topbar {
   }
 	.post-item-title {
 		font-size: 4em;
-		span {
+		.type-machine {
 			color: $secondary-color;
 		}
+		
+
 	}
-	
+	.strings {
+		display:none;
+	}	
 	a.button{
 			background:#FFF;
 			color:$secondary-color;
@@ -611,6 +619,8 @@ meta.foundation-mq-topbar {
 	text-align: center;
 	text-transform: uppercase;
 	width:100%;
+	display: flex;
+	justify-content: center;
 }
 
 .slider-wrapper .panel {
@@ -670,6 +680,7 @@ button.slick-prev.slick-arrow {
 .typed-cursor {
 	font-weight: 100;
 	font-family: Arial, Helvetica, sans-serif;
+	color: $secondary-color;
 }
 
 /*
@@ -957,13 +968,13 @@ section.white-section .section-title {
 
 	}
 	&:before{
-		border-bottom: solid 3px $secondary-color;
+		border-bottom: solid 2px $secondary-color;
 		width: 20px;
 		left: 45%;
 	}
 	&:after{
 		width: 50px;
-		border-bottom: solid 3px $third-color;
+		border-bottom: solid 2px $third-color;
 		left: 50%;
 	}
 
@@ -2067,9 +2078,24 @@ footer .breadcrumbs > *::before {
 
 /*
 ================================================================================================
+21.0 - Media Queries (Tablet 768-1024px)
+================================================================================================
+*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.slider-caption .post-item-title {
+		font-size: 3.5em;
+	}
+
+}
+/*
+================================================================================================
 21.0 - Media Queries (Mobile Large 37.50em (600px))
 ================================================================================================
 */
+
 @media only screen and (max-width: 37.50em) {
 
 	/* Blog */
@@ -2110,21 +2136,51 @@ footer .breadcrumbs > *::before {
 		flex-direction: column;
 	}
 	body.home header .socials {
-		bottom: 20%;
-		left: 29%;
+		bottom: 3%;
 		a {
 			font-size: 1em;
 
 		}
 	}
-	section.white-section .section-item{
-		
+	section.white-section {
 
-		&:nth-child(even):after{
-			border-top: none;
-			bottom: 0px !important;
-			border-bottom: solid 1px $primary-color;
-			top: unset;
+		.section-item{
+			
+			
+			&:nth-child(even):after{
+				border-top: none;
+				bottom: 0px !important;
+				border-bottom: solid 1px $primary-color;
+				top: unset;
+			}
+		}
+
+		.section-title {
+			&:before{
+				border-bottom: solid 1px $secondary-color;
+				width: 20px;
+				left: 40%;
+			}
+			&:after{
+				width: 50px;
+				border-bottom: solid 1px $third-color;
+				left: 50%;
+			}
+
+		}
+	}
+	section.biography-wrapper{
+	
+		.biography{
+			
+			.section-title {
+				&:before{
+					left: 40%;
+				}
+				&:after{
+					left: 50%;
+				}
+			}
 		}
 	}
 
@@ -2146,8 +2202,9 @@ footer .breadcrumbs > *::before {
 	}
 	
 	.slider-caption .post-item-title {
-		font-size: 1.4em;
+		font-size: 1.7em;
 	}
+	
 	.slider-caption span.category {
 		display: none;
 	}
@@ -2170,20 +2227,25 @@ footer .breadcrumbs > *::before {
 	width: auto;
 	
 	}
-	
-	header div.slogan .title{
-	padding-top:20px;
-	font-size: 3.8em;
-}
-	header div.logo{
-		margin-top: 20px;
-		margin:0 auto;
-		float: none;
+		
+	header {
+		div.slogan .title{
+			padding-top:20px;
+			font-size: 3.8em;
+		}
+		div.logo{
+			margin-top: 20px;
+			margin:0 auto;
+			float: none;
+			margin-bottom: -55px !important;
+		}	
+		.slider-wrapper .slider-caption {
+			padding: 10px;
+			top:5%;
+		}
 	}
-	
-	header div.logo {
-		margin-bottom: -55px !important;
-	}
+
+
 	.top-bar-section ul li:hover:not(.has-form) > a {
 		color:$primary-color;
 	}
@@ -2278,6 +2340,17 @@ footer .breadcrumbs > *::before {
 	.top-bar .toggle-topbar.menu-icon a span::after {
 		font-size: 1.5em;
 	}    
+
+	#footer {
+		padding-bottom: 20px;	
+		.socials {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	}
 }
 
 /*
@@ -2303,8 +2376,9 @@ footer .breadcrumbs > *::before {
 	   header div.logo {
 		margin-bottom: -35px !important;
 	}
-	.slider-controllers .post-item-title {
-		font-size: 1em;
+
+	.slider-caption .post-item-title {
+		font-size: 1.4em;
 	}
 }
 
