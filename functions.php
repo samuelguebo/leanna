@@ -162,7 +162,7 @@ function leanna_scripts() {
 	wp_enqueue_script( 'modernizer', get_template_directory_uri().'/assets/js/modernizr.min.js', true);
 	wp_enqueue_script( 'typed', get_template_directory_uri().'/assets/js/typed.js', true);
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri().'/assets/js/foundation.min.js', true);
-//	wp_enqueue_script( 'scroll-reveal', get_template_directory_uri().'/js/scrollreveal.min.js', true);
+	wp_enqueue_script( 'scroll-reveal', get_template_directory_uri().'/assets/js/scrollreveal.min.js', true);
 	wp_enqueue_script( 'slick-slider', get_template_directory_uri().'/assets/js/slick.min.js','1.6.0', true);
 	wp_enqueue_script( 'main-scripts', get_template_directory_uri().'/assets/js/scripts.js');
 

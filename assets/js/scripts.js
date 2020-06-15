@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
     
     
     /* WOW effect with ScrollReveal 
+    */
     window.sr = ScrollReveal();
     sr.reveal('.top-bar li', {
         duration: 1000
@@ -25,12 +26,18 @@ jQuery(document).ready(function ($) {
     sr.reveal('.white-section .section-item', {
         duration: 1000
     }, 100);
+    sr.reveal('.white-section article', {
+        duration: 1000
+    }, 100);
+    sr.reveal('.white-section .section-description', {
+        duration: 1000
+    }, 100);
     
     sr.reveal('form input', {
         duration: 2000
     }, 50);
     
-    */
+    
     
     /* Back to Top */
     if ($('#back-to-top').length) {
