@@ -1791,6 +1791,16 @@ footer#footer a#back-to-top {
 }
 
 
+// Multilingual
+.widget_icl_lang_sel_widget {
+	& > div {
+		padding: 0;
+		margin: 0;
+	}
+	.wpml-ls-flag {
+		margin-right: 10px;
+	}
+}
 
 
 /*

@@ -24,7 +24,7 @@ if(count($strings) > 0){
         <div class="slider-caption post-item-caption">
             <div class="panel large-8 medium-7 small-8 columns">
                 <h1 class="post-item-title"><?php echo $post['slide_description'];?> <span class="type-machine"><?php echo $title;?></span></h1>
-                <span class="strings"><?php echo $post['slide_title'];?></span>
+                <span class="strings"><?php echo _e($post['slide_title'], 'leanna');?></span>
             </div>
         </div>
     <div class="clearfix"></div>
