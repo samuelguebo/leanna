@@ -17,7 +17,7 @@ if (is_array($socials)): //make sure the icons list is not empty ?>
 	<ul class="right social-icons">
 		<?php foreach ($socials as $social) :?>
 			<li class="reveal">
-				<a href="<?php echo $social['social_url']; ?>" alt="<?php echo $social['social_title']; ?>"></a>
+				<a href="<?php echo $social['social_url']; ?>" title="<?php echo $social['social_title']; ?>"></a>
 			</li>
 		<?php endforeach; ?>
 	</ul>
