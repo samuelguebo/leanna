@@ -159,6 +159,7 @@ header div.slogan a:hover {
 	top: 0;
 	left: 0;
 	position: absolute;
+	z-index:1;
 }
 .single-cover .title.center{
 		text-align: center;
@@ -297,6 +298,7 @@ header .banner-top .widget-title{
 	content: '\f0c9';
 	color: $secondary-color;
 	font-size: 1.8em;
+	z-index: 100;
 	
 }
 
@@ -2145,9 +2147,6 @@ and (max-device-width : 1024px) {
 	.top-bar .toggle-topbar.menu-icon a span::after {
 		margin-right: 10px;
 	} 
-	body.home header .nav-wrapper {
-		right: 0%;
-	}
 	
 	section.items-wrapper {
 		flex-direction: column;
@@ -2260,7 +2259,13 @@ and (max-device-width : 1024px) {
 			padding: 10px;
 			top:5%;
 		}
+
+		.nav-wrapper{
+			right: 0%;
+		}
 	}
+
+	
 
 
 	.top-bar-section ul li:hover:not(.has-form) > a {
