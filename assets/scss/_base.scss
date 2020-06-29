@@ -735,6 +735,7 @@ button.slick-prev.slick-arrow {
 }
 .single-row article.post-item iframe {
 	min-width: 100%;
+	max-width: 100;
 }
 
 .single-row article.post-item {
@@ -2207,11 +2208,6 @@ and (max-device-width : 1024px) {
 		padding: 10px 30px;
 	}
 	
-	.slider-wrapper .post-item img{ 
-		/*min-height: 230px; 
-		height: 100%;
-		*/
-	}
 	.slider-wrapper{
 		max-height: 230px !important;
 		overflow: hidden;
@@ -2261,7 +2257,10 @@ and (max-device-width : 1024px) {
 		}
 
 		.nav-wrapper{
-			right: 0%;
+			right: 0% ;
+			width: 100%;
+			padding-left:0px;
+			padding-right:0px;
 		}
 	}
 
@@ -2274,13 +2273,7 @@ and (max-device-width : 1024px) {
 	.nav-wrapper nav {
 		border: none;
 	}
-	.top-bar ul.title-area li {
-		 /* background: #000; */
-	}
-	.top-bar ul li {
-		/* background: #FFF;*/
-		/* border-bottom: dotted 1px $link-color;*/
-	}
+
 	.main-nav > li {
 	border-left: none;
 
@@ -2349,11 +2342,6 @@ and (max-device-width : 1024px) {
 		margin-bottom: 0.6rem;
 		text-rendering: optimizeLegibility;
 	}  
-	.columns.nav-wrapper {
-		width: 100%;
-		padding-left:0px;
-		padding-right:0px;
-	}
 	.top-bar-section ul li > a {
 	color:$primary-color;
 	}
@@ -2455,7 +2443,9 @@ article.comment-wrapper {
 	margin:0;
 }
 
-
+pre {
+	white-space: normal;
+}
 /*
 ================================================================================================
 25.0 - Miscelleanous (Test and hacks colors)
